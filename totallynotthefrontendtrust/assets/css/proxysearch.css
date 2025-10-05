@@ -36,7 +36,6 @@ body {
 }
 
 .nav-bar {
-   background: none;
    left: 0;
    right: 0;
    height: 2.5em;
@@ -46,19 +45,40 @@ body {
    z-index: 100;
    width: 100vw;
    position: fixed;
+   background: none;
 }
-
-
+.nav-button {
+   border-radius: 10px;
+   color: white;
+  background: transparent;
+   height: 2em;
+   width: 3em;
+   border: none;
+   right: 15px;
+   top: auto;
+   box-sizing: border-box;
+   margin-right: 15px;
+   transition: 0.3s ease;
+   margin-top: 0 auto;
+   margin-bottom: 0 auto;
+   cursor: pointer;
+}
+/*
+.nav-button:hover {
+   background-color: rgba(255, 255, 255, 0.35);
+   cursor: pointer;
+}*/
+/*
 .nav-button {
     position: relative;
-    border: none; /* Remove any default border */
-    background-color: transparent; /* Transparent background */
-    color: white; /* Google blue color for the text */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 15px; /* Adjust font size as needed */
-    overflow: hidden; /* Prevents overflow of the hover effect */
-    border-radius: 50px; /* Rounded corners for the button */
-    transition: color 0.3s ease; /* Smooth color transition */
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: color 0.3s ease;
 }
 
 .nav-button::before {
@@ -66,23 +86,23 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%; /* Adjust size for hover effect */
-    height: 300%; /* Adjust size for hover effect */
-    background: rgba(255, 255, 255, 0.35); /* Light blue background for hover */
-    border-radius: 50%; /* Circular shape */
-    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
-    transition: transform 0.3s ease; /* Smooth transition */
-    z-index: 0; /* Positioned behind the text */
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    z-index: 0;
 }
 
 .nav-button:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .nav-button:hover {
-    color: rgba(255, 255, 255, 0.35); /* Change text color on hover (optional) */
-    z-index: 1; /* Ensure text is above the hover effect */
-}
+    color: rgba(255, 255, 255, 0.35);
+    z-index: 1;
+}*/
  video#bg-video {
       position: fixed;
       top: 0;
@@ -124,24 +144,6 @@ body {
    width: 20%;
 }
 
-.nav-right .nav-btn:hover {
-   text-transform: uppercase;
-   font-weight: 800;
-   font-family: "Inter", sans-serif;
-   font-style: normal;
-   font-size: 3vw;
-   transform: translateX(-20%);
-}
-
-.nav-right .nav-btn:hover {
-   text-transform: uppercase;
-   font-weight: 800;
-   font-family: "Inter", sans-serif;
-   font-style: normal;
-   font-size: 3vh;
-   transform: translateX(-20%);
-}
-
 .fullscreen .nav-bar {
    display: none;
 }
@@ -157,12 +159,11 @@ body {
 .bar {
    font-family: "Inter", sans-serif;
    font-size: 15px;
-   height: 15px;
+   height: 30px;
    background-color: rgba(255, 255, 255, 0.05);
    border: none;
    color: var(--text-primary);
-   width: 875px;
-   height: 30px;
+   width: 900px;
    border-radius: 5px;
    margin: 0 auto;
    transition: 0.3s;
@@ -221,17 +222,32 @@ p {
 .frame-container iframe.active {
    display: block;
 }
-
+#add-tab {
+   padding: 0.5rem;
+   cursor: pointer;
+   background: transparent;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   margin-right: 0.5rem;
+   transition: background-color 0.3s ease;
+}
+/*
+#add-tab:hover {
+   background-color: rgba(255, 255, 255, 0.35);
+   cursor: pointer;
+}*/
+/*
 #add-tab {
     position: relative;
-    border: none; /* Remove any default border */
-    background-color: transparent; /* Transparent background */
-    color: white; /* Google blue color for the text */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    overflow: hidden; /* Prevents overflow of the hover effect */
-    border-radius: 50px; /* Rounded corners for the button */
-    transition: color 0.3s ease; /* Smooth color transition */
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: color 0.3s ease;
 }
 
 #add-tab::before {
@@ -239,24 +255,24 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%; /* Adjust size for hover effect */
-    height: 300%; /* Adjust size for hover effect */
-    background: rgba(255, 255, 255, 0.35); /* Light blue background for hover */
-    border-radius: 50%; /* Circular shape */
-    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
-    transition: transform 0.3s ease; /* Smooth transition */
-    z-index: 0; /* Positioned behind the text */
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    z-index: 0;
 }
 
 #add-tab:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+    transform: translate(-50%, -50%) scale(1); 
 }
 
 #add-tab:hover {
-    color: rgba(255, 255, 255, 0.35); /* Change text color on hover (optional) */
-    z-index: 1; /* Ensure text is above the hover effect */
+    color: rgba(255, 255, 255, 0.35); 
+    z-index: 1;
 }
-
+*/
 
 ul {
    list-style-type: none;

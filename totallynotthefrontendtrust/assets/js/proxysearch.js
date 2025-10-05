@@ -215,11 +215,12 @@ function popout() {
   if (activeIframe) {
     const newWindow = window.open("about:blank", "_blank");
     if (newWindow) {
-      const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
+     // const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
+      const name = localStorage.getItem("name") || "Math Bros. Dashboard";
       const icon =
         localStorage.getItem("icon") ||
        // "/assets/media/favicon/khan.png";
-        "/assets/media/favicon/khan.png";
+        "/assets/media/favicon/daddy.png.png";
       newWindow.document.title = name;
       const link = newWindow.document.createElement("link");
       link.rel = "icon";
@@ -284,7 +285,8 @@ function FS() {
   if (activeIframe) {
     if (activeIframe.contentDocument.fullscreenElement) {
       activeIframe.contentDocument.exitFullscreen();
-    } else {
+    } 
+    else {
       activeIframe.contentDocument.documentElement.requestFullscreen();
     }
   } else {
@@ -293,6 +295,11 @@ function FS() {
 }
 const fullscreenButton = document.getElementById("fullscreen-button");
 fullscreenButton.addEventListener("click", FS);
+if (navigator.userAgent.includes("Chrome")) {
+  window.addEventListener("resize", () => {
+    navigator.keyboard.lock(["Escape"]);
+  });
+}
 // Home
 function Home() {
   window.location.href = "/home";
@@ -361,24 +368,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const activeIframe = document.querySelector("#frame-container iframe.active");
     if (nb.style.display === "none") {
       nb.style.display = "";
-      activeIframe.style.top = "10%";
-      activeIframe.style.height = "90%";
-      tb.querySelector("i").classList.remove("fa-folder-open");
-      tb.querySelector("i").classList.add("fa-folder");
+      activeIframe.style.top = "11%";
+      activeIframe.style.height = "89%";
+      tb.querySelector("i").classList.remove("fa-magnifying-glass-plus");
+      tb.querySelector("i").classList.add("fa-magnifying-glass-minus");
     } else {
       nb.style.display = "none";
       activeIframe.style.top = "5%";
       activeIframe.style.height = "95%";
-      tb.querySelector("i").classList.remove("fa-folder");
-      tb.querySelector("i").classList.add("fa-folder-open");
+      tb.querySelector("i").classList.remove("fa-magnifying-glass-minus");
+      tb.querySelector("i").classList.add("fa-magnifying-glass-plus");
     }
   });
 });
-if (navigator.userAgent.includes("Chrome")) {
-  window.addEventListener("resize", () => {
-    navigator.keyboard.lock(["Escape"]);
-  });
-}
 function Load() {
   const activeIframe = document.querySelector("#frame-container iframe.active");
   if (

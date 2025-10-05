@@ -233,8 +233,8 @@ body[theme="whats"] {
 }
 body[theme="whatss"] {
     --text: #cdd6f4;
-  --primary-color: #333;
-  --primary-light: #555;
+  --primary-color: #555;
+  --primary-light: #777;
   
 }
 body[theme="whathuzz"] {

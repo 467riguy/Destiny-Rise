@@ -119,8 +119,8 @@ const routes = [
   { path: "/animes", file: "/real_files/anime.html" },
   { path: "/song", file: "/real_files/web_music.html" },
   { path: "/proxyhome", file: "/real_files/proxyhome.html" },
-  { path: "/resources", file: "/real_files/trickfiles/resource.html" },
-  { path: "/learn", file: "/real_files/trickfiles/learnmore.html" },
+  { path: "/resources", file: "/trick_files/resource.html" },
+  { path: "/learn", file: "/trick_files/learnmore.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:
