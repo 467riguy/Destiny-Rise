@@ -142,9 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Key
-let eventKey = localStorage.getItem("eventKey") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕣𝕒𝕟𝕕𝕠𝕞 𝕜𝕖𝕪...";
-let eventKeyRaw = localStorage.getItem("eventKeyRaw") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕣𝕒𝕟𝕕𝕠𝕞 𝕜𝕖𝕪...";
-let pLink = localStorage.getItem("pLink") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕌ℝ𝕃...";
+let eventKey = localStorage.getItem("eventKey") || "Type in a random key...";
+let eventKeyRaw = localStorage.getItem("eventKeyRaw") || "Type in a random key...";
+let pLink = localStorage.getItem("pLink") || "Type in a URL...";
 
 document.addEventListener("DOMContentLoaded", () => {
   const eventKeyInput = document.getElementById("eventKeyInput");
