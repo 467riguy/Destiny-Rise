@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = `
-        .# > .# {
+        .random-word-generator > .typewriter {
             border-right: 0.06em solid #fff; /* Cursor visible when typing */
-            animation: blink 0.7s step-end infinite; /* Blinking animation */
+            /*animation: blink 0.7s step-end infinite; *//* Blinking animation */
         }
 
         @keyframes blink {
