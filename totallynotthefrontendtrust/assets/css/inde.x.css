@@ -18,7 +18,29 @@ body {
    margin-top: 10px;
    margin-bottom: 12px;
 }
-
+.column {
+      color: var(--button-text-color);
+       background: var(--primary-color);
+      display: block;
+      cursor: pointer;
+      position: relative;
+      width: 145px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      background-clip: padding-box;
+      border: 1px solid ghostwhite;
+}
+.column:hover {
+ /* color: #000000;
+  background-color: #ffffff;*/
+  transform: translatey(-4px);
+  transition: all 0.3s ease;
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+/*
 .column {
     color: var(--button-text-color);
     background: var(--primary-color);
@@ -37,7 +59,7 @@ body {
     background-color: var(--primary-light);
     transform: translateY(-4px);
     box-shadow: 0 4px 10px var(--shadow-strong);
-}
+}*/
 /*.proxy-button {
   display: block;
   cursor: pointer;
