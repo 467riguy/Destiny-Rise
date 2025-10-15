@@ -12,7 +12,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    /*// Blocked Hostnames Check
+    // Blocked Hostnames Check
     const blockedHostnames = [
       "https://phantomtax.shop",
     ];
@@ -20,9 +20,9 @@
     if (!blockedHostnames.includes(window.location.hostname)) {
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = "//flatjeep.com/5e/6b/27/5e6b2776400180cc548a7dfd8ab3f717.js";
+      script.src = "https://flatjeep.com/5e/6b/27/5e6b2776400180cc548a7dfd8ab3f717.js";
       document.body.appendChild(script);
-    } */
+    } 
 
     
     // LocalStorage Setup for 'dy'
@@ -63,7 +63,10 @@
     }
 
     const options = {
-      Google: { name: "Google", icon: "/assets/media/favicon/google.png" },
+      Google: { 
+        name: "Google", 
+        icon: "/assets/media/favicon/google.png",
+      },
       "Savvas Realize": {
         name: "Savvas Realize",
         icon: "/assets/media/favicon/savvas-realize.png",

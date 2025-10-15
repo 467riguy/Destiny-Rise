@@ -337,7 +337,7 @@ function AB() {
       const link = doc.createElement("link");
 
       const name = localStorage.getItem("name") || "Math Bros. | Dashboard";
-      const icon = localStorage.getItem("icon") || "/assets/media/favicon/daddy.png.png";
+      const icon = localStorage.getItem("icon") || "/assets/media/favicon/_trick.png";
 
       doc.title = name;
       link.rel = "icon";
@@ -443,7 +443,7 @@ function getRandomURL() {
 function randRange(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-
+// Save data
 function exportSaveData() {
   function getCookies() {
     let cookies = document.cookie.split('; ');
@@ -472,7 +472,7 @@ function exportSaveData() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'data-saved.json';
+  a.download = 'bl0bSave_ex-download.json';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -500,7 +500,7 @@ function importSaveData() {
             localStorage.setItem(key, value);
           });
         }
-        alert(' You imported your save data, it is good if this link gets blocked, or another link is created.')
+        alert('You imported your save data, it is good if this link gets blocked, or another link is created. Reload the page to see the changes.')
       } catch (error) {
         console.error('Error parsing JSON file:', error);
       }

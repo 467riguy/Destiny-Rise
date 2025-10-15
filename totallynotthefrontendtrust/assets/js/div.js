@@ -81,21 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
             new TypeDown(elements[i], JSON.parse(toRotate), period);
         }
     }
-
-    const css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = `
-        .random-word-generator > .typewriter {
-            border-right: 0.06em solid #fff; /* Cursor visible when typing */
-            /*animation: blink 0.7s step-end infinite; *//* Blinking animation */
-        }
-
-        @keyframes blink {
-            0%, 100% { border-color: transparent; } /* Hidden at start and end */
-            50% { border-color: #fff; } /* Visible halfway through the blink */
-        }
-    `;
-    document.body.appendChild(css);
 });
 
 
@@ -467,13 +452,24 @@ updateBattery();
 navigator.getBattery().then((battery) => {
   battery.addEventListener("levelchange", updateBattery);
 });
-// This is the code you must include:
+// Favicon
+function setFavicon(url) {
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = url;
+    document.head.appendChild(link);
+}
+setFavicon('/assets/media/favicon/_trick.png');
+// Title
+function setTitle(title) {
+    document.title = title;
+}
+window.onload = function() {
+    setTitle("Math Bros. | Dashboard");
+};
+/*
 window.onbeforeunload = function (event) {
   const confirmationMessage = 'Leave Site?';
-  
-  // You must set the returnValue property for the prompt to display.
   (event || window.event).returnValue = confirmationMessage;
-  
-  // And you must return the value for most modern browsers.
   return confirmationMessage;
-};
+};*/

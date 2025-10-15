@@ -117,7 +117,7 @@ const routes = [
   { path: "/contact", file: "/real_files/contactsupport.html" },
   { path: "/learnmathhere", file: "index.html" },
   { path: "/animes", file: "/real_files/anime.html" },
-  { path: "/song", file: "/real_files/web_music.html" },
+  { path: "/song", file: "/real_files/song.html" },
   { path: "/proxyhome", file: "/real_files/proxyhome.html" },
   { path: "/resources", file: "/trick_files/resource.html" },
   { path: "/learn", file: "/trick_files/learnmore.html" },

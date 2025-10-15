@@ -39,7 +39,6 @@
             <h3>Save Progress</h3>
             <p>Export your destiny rise data on this site and import this to another site to continue your progress.
             </p>
-    <p>Importing a save file will overwrite your current saves!</p>
             <button class="key-button" value="Export" onclick="exportSaveData();">Download save</button>
             <button class="key-button" value="Import" onclick="importSaveData();">Import save</button>
           </div>
@@ -58,18 +57,16 @@
               <option value="Ecosia">Ecosia</option>
             </select>
           </div>
-            <button class="key-button" onclick="SaveEngine();">𝕊𝕒𝕧𝕖</button>
+            <button class="key-button" onclick="SaveEngine();">Save</button>
           </div>
 
           <div class="settings-card">
             <h3><span class="highlight">Choose your proxy</span></h3>
             <p>Ultraviolet is the main option, because it is the best one, and dynamic was built for support and speed. Dynamic is a little bugged.</p>
-            <div class="select-wrapper">
               <select id="pChange">
                 <option value="uv">Ultraviolet</option>
                 <option value="dy">Dynamic</option>
               </select>
-            </div>
           </div>
 
           <div class="settings-card">
@@ -120,7 +117,7 @@
 
           <div class="settings-card">
             <h3><span class="highlight">Set Background Image</span></h3>
-            <p>Change the site background. Good for picky little good boys (JK IM SORRY). Use a valid HTTPS image link. Or it won’t work.</p>
+            <p>Change the site background. Use a valid HTTPS image link. Or it won’t work.</p>
             <input class="key-form" type="text" id="background-input" placeholder="Do https:// first" />
             <button class="key-button" id="save-button">Save</button>
             <button class="key-button" id="reset-button">Reset</button>
@@ -128,7 +125,7 @@
 
           <div class="settings-card">
             <h3><span class="highlight">Set Panic Key</span></h3>
-            <p>Assign a key to instantly redirect to a safe site. Best for if a teacher comes and walks by, redirect to studying site or wtv.</p>
+            <p>Assign a key to instantly redirect to a random site.</p>
             <input type="text" id="eventKeyInput" placeholder="Panic Keys (Comma Not Working)" class="key-form" />
             <input class="key-form" placeholder="https://" type="text" id="linkInput" />
             <button class="key-button" onclick="saveEventKey()">Save</button>

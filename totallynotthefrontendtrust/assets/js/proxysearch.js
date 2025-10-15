@@ -1,3 +1,4 @@
+
 window.addEventListener("load", () => {
   navigator.serviceWorker.register("../sw.js?v=07-03-big25", { scope: "/a/" });
   const form = document.getElementById("4m");
@@ -12,29 +13,7 @@ window.addEventListener("load", () => {
       processUrl(url);
     });
   }
-  function processUrl(url) {
-    sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
-    const iframeContainer = document.getElementById("frame-container");
-    const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(iframe => iframe.classList.contains("active"));
-    activeIframe.src = `/a/${__uv$config.encodeUrl(url)}`;
-    activeIframe.dataset.tabUrl = url;
-    input.value = url;
-    console.log(activeIframe.dataset.tabUrl);
-  }
-  function isUrl(val = "") {
-    if (/^http(s?):\/\//.test(val) || (val.includes(".") && val.substr(0, 1) !== " ")) {
-      return true;
-    }
-    return false;
-  }
-  function prependHttps(url) {
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return `https://${url}`;
-    }
-    return url;
-  }
-});
-  /*
+  
   function processUrl(url) {
     sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
     const iframeContainer = document.getElementById("frame-container");
@@ -61,170 +40,8 @@ window.addEventListener("load", () => {
     }
     return url;
   }
-});*/
-document.addEventListener("DOMContentLoaded", event => {
-  const addTabButton = document.getElementById("add-tab");
-  const tabList = document.getElementById("tab-list");
-  const iframeContainer = document.getElementById("frame-container");
-  let tabCounter = 1;
-  addTabButton.addEventListener("click", () => {
-    createNewTab();
-    Load();
-  });
-  function createNewTab() {
-    const newTab = document.createElement("li");
-    const tabTitle = document.createElement("span");
-    const newIframe = document.createElement("iframe");
-    newIframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-orientation-lock allow-presentation allow-storage-access-by-user-activation";
-    // When Top Navigation is not allowed links with the "top" value will be entirely blocked, if we allow Top Navigation it will overwrite the tab, which is obviously not wanted.
-    tabTitle.textContent = `Proxy Tab ${tabCounter}`;
-    tabTitle.className = "t";
-    newTab.dataset.tabId = tabCounter;
-    newTab.addEventListener("click", switchTab);
-    newTab.setAttribute("draggable", true);
-    const closeButton = document.createElement("button");
-    closeButton.classList.add("close-tab");
-    closeButton.innerHTML = "&#10005;";
-    closeButton.addEventListener("click", closeTab);
-    newTab.appendChild(tabTitle);
-    newTab.appendChild(closeButton);
-    tabList.appendChild(newTab);
-    const allTabs = Array.from(tabList.querySelectorAll("li"));
-    for (const tab of allTabs) {
-      tab.classList.remove("active");
-    }
-    const allIframes = Array.from(iframeContainer.querySelectorAll("iframe"));
-    for (const iframe of allIframes) {
-      iframe.classList.remove("active");
-    }
-    newTab.classList.add("active");
-    newIframe.dataset.tabId = tabCounter;
-    newIframe.classList.add("active");
-    newIframe.addEventListener("load", () => {
-      const title = newIframe.contentDocument.title;
-      if (title.length <= 1) {
-        tabTitle.textContent = "Tab";
-      } else {
-        tabTitle.textContent = title;
-      }
-      newIframe.contentWindow.open = url => {
-        sessionStorage.setItem("URL", `/a/${__uv$config.encodeUrl(url)}`);
-        createNewTab();
-        return null;
-      };
-      if (newIframe.contentDocument.documentElement.outerHTML.trim().length > 0) {
-        Load();
-      }
-      Load();
-    });
-    const goUrl = sessionStorage.getItem("GoUrl");
-    const url = sessionStorage.getItem("URL");
-
-    if (tabCounter === 0 || tabCounter === 1) {
-      if (goUrl !== null) {
-        if (goUrl.includes("/e/")) {
-          newIframe.src = window.location.origin + goUrl;
-        } else {
-          newIframe.src = `${window.location.origin}/a/${goUrl}`;
-        }
-      } else {
-        newIframe.src = "/";
-      }
-    } else if (tabCounter > 1) {
-      if (url !== null) {
-        newIframe.src = window.location.origin + url;
-        sessionStorage.removeItem("URL");
-      } else if (goUrl !== null) {
-        if (goUrl.includes("/e/")) {
-          newIframe.src = window.location.origin + goUrl;
-        } else {
-          newIframe.src = `${window.location.origin}/a/${goUrl}`;
-        }
-      } else {
-        newIframe.src = "/";
-      }
-    }
-
-    iframeContainer.appendChild(newIframe);
-    tabCounter += 1;
-  }
-  function closeTab(event) {
-    event.stopPropagation();
-    const tabId = event.target.closest("li").dataset.tabId;
-    const tabToRemove = tabList.querySelector(`[data-tab-id='${tabId}']`);
-    const iframeToRemove = iframeContainer.querySelector(`[data-tab-id='${tabId}']`);
-    if (tabToRemove && iframeToRemove) {
-      tabToRemove.remove();
-      iframeToRemove.remove();
-      const remainingTabs = Array.from(tabList.querySelectorAll("li"));
-      if (remainingTabs.length === 0) {
-        tabCounter = 0;
-        document.getElementById("input").value = "";
-      } else {
-        const nextTabIndex = remainingTabs.findIndex(tab => tab.dataset.tabId !== tabId);
-        if (nextTabIndex > -1) {
-          const nextTabToActivate = remainingTabs[nextTabIndex];
-          const nextIframeToActivate = iframeContainer.querySelector(`[data-tab-id='${nextTabToActivate.dataset.tabId}']`);
-          for (const tab of remainingTabs) {
-            tab.classList.remove("active");
-          }
-          remainingTabs[nextTabIndex].classList.add("active");
-          const allIframes = Array.from(iframeContainer.querySelectorAll("iframe"));
-          for (const iframe of allIframes) {
-            iframe.classList.remove("active");
-          }
-          nextIframeToActivate.classList.add("active");
-        }
-      }
-    }
-  }
-  function switchTab(event) {
-    const tabId = event.target.closest("li").dataset.tabId;
-    const allTabs = Array.from(tabList.querySelectorAll("li"));
-    for (const tab of allTabs) {
-      tab.classList.remove("active");
-    }
-    const allIframes = Array.from(iframeContainer.querySelectorAll("iframe"));
-    for (const iframe of allIframes) {
-      iframe.classList.remove("active");
-    }
-    const selectedTab = tabList.querySelector(`[data-tab-id='${tabId}']`);
-    if (selectedTab) {
-      selectedTab.classList.add("active");
-      Load();
-    } else {
-      console.log("No selected tab found with ID:", tabId);
-    }
-    const selectedIframe = iframeContainer.querySelector(`[data-tab-id='${tabId}']`);
-    if (selectedIframe) {
-      selectedIframe.classList.add("active");
-    } else {
-      console.log("No selected iframe found with ID:", tabId);
-    }
-  }
-  let dragTab = null;
-  tabList.addEventListener("dragstart", event => {
-    dragTab = event.target;
-  });
-  tabList.addEventListener("dragover", event => {
-    event.preventDefault();
-    const targetTab = event.target;
-    if (targetTab.tagName === "LI" && targetTab !== dragTab) {
-      const targetIndex = Array.from(tabList.children).indexOf(targetTab);
-      const dragIndex = Array.from(tabList.children).indexOf(dragTab);
-      if (targetIndex < dragIndex) {
-        tabList.insertBefore(dragTab, targetTab);
-      } else {
-        tabList.insertBefore(dragTab, targetTab.nextSibling);
-      }
-    }
-  });
-  tabList.addEventListener("dragend", () => {
-    dragTab = null;
-  });
-  createNewTab();
 });
-/*
+
 document.addEventListener("DOMContentLoaded", event => {
   const addTabButton = document.getElementById("add-tab");
   const tabList = document.getElementById("tab-list");
@@ -240,7 +57,6 @@ document.addEventListener("DOMContentLoaded", event => {
     const newIframe = document.createElement("iframe");
     newIframe.sandbox =
       "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-orientation-lock allow-presentation allow-storage-access-by-user-activation";
-    // When Top Navigation is not allowed links with the "top" value will be entirely blocked, if we allow Top Navigation it will overwrite the tab, which is obviously not wanted.
     tabTitle.textContent = `Proxy tab ${tabCounter}`;
     tabTitle.className = "t";
     newTab.dataset.tabId = tabCounter;
@@ -384,7 +200,6 @@ newIframe.addEventListener("load", () => {
   });
   createNewTab();
 });
-*/
 // Reload
 function reload() {
   const activeIframe = document.querySelector("#frame-container iframe.active");
@@ -408,7 +223,7 @@ function popout() {
       const icon =
         localStorage.getItem("icon") ||
        // "/assets/media/favicon/khan.png";
-        "/assets/media/favicon/daddy.png.png";
+        "/assets/media/favicon/_trick.png";
       newWindow.document.title = name;
       const link = newWindow.document.createElement("link");
       link.rel = "icon";
@@ -489,42 +304,8 @@ if (navigator.userAgent.includes("Chrome")) {
   });
 }
 // Home
-function Home() {
+function home_page() {
   window.location.href = "/home";
-}
-const homeButton = document.getElementById("home-page");
-homeButton.addEventListener("click", Home);
-// Settings
-function Games() {
-  window.location.href = "/games";
-}
-const gameButton = document.getElementById("games-page");
-gameButton.addEventListener("click", Games);
-// Settings
-function Anime() {
-  window.location.href = "/animes";
-}
-const animeButton = document.getElementById("anime-page");
-animeButton.addEventListener("click", Anime);
-// Settings
-function App() {
-  window.location.href = "/apps";
-}
-const appButton = document.getElementById("app-page");
-appButton.addEventListener("click", App);
-// Settings
-function Settings() {
-  window.location.href = "/settings";
-}
-
-const settingsButton = document.getElementById("settings-page");
-settingsButton.addEventListener("click", Settings);
-
-const songsButton = document.getElementById("songs-page");
-songsButton.addEventListener("click", Songs);
-// Songs
-function Songs() {
-  window.location.href = "/song";
 }
 // Back
 function goBack() {
@@ -556,8 +337,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const activeIframe = document.querySelector("#frame-container iframe.active");
     if (nb.style.display === "none") {
       nb.style.display = "";
-      activeIframe.style.top = "11%";
-      activeIframe.style.height = "89%";
+      activeIframe.style.top = "12%";
+      activeIframe.style.height = "88%";
       tb.querySelector("i").classList.remove("fa-magnifying-glass-plus");
       tb.querySelector("i").classList.add("fa-magnifying-glass-minus");
     } else {
