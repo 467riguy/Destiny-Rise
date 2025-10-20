@@ -115,6 +115,8 @@ function generateRandomWord() {
 
 // Automatically change the word every 2 seconds
 setInterval(generateRandomWord, 2000); // Change word every 2 seconds
+
+
 // particle
 const particles = [];
 const connections = [];
@@ -507,19 +509,55 @@ setInterval(connectParticles, 800); // Connect particles every 800ms
           audio.play();
       });
     */
+/*
    const preloader = document.createElement("div");
 preloader.id = "preloader";
 
 const spinner = document.createElement("div");
 spinner.className = "spinner";
-
+// Add text above the spinner
+const loadingText = document.createElement("h1");
+loadingText.textContent = "Let us set up everything for your experience...";
 // Add emoji inside an <h1> tag
 const emoji = document.createElement("h1");
  emoji.textContent = "";
 //emoji.textContent = "🔥";
 // Nest elements
 spinner.appendChild(emoji);
-preloader.appendChild(spinner);
+preloader.appendChild(loadingText);
+preloader.appendChild(spinner);*/
+const preloader = document.createElement("div");
+preloader.id = "preloader";
+
+// Create the loading text
+const loadingText = document.createElement("h1");
+loadingText.textContent = "Let us set up everything for your experience...";
+
+// Create the loader container
+const loader = document.createElement("div");
+loader.className = "loader";
+
+// Create the three bouncing dots
+const dot1 = document.createElement("div");
+dot1.className = "dot";
+
+const dot2 = document.createElement("div");
+dot2.className = "dot";
+
+const dot3 = document.createElement("div");
+dot3.className = "dot";
+
+// Append the dots to the loader container
+loader.appendChild(dot1);
+loader.appendChild(dot2);
+loader.appendChild(dot3);
+
+// Append the loading text and loader to the preloader
+preloader.appendChild(loadingText);
+preloader.appendChild(loader);
+
+// You can now append the preloader to the body
+document.body.appendChild(preloader);
 
 // Append to body
 document.body.appendChild(preloader);

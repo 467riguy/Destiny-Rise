@@ -57,16 +57,6 @@ body {
         text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
     }
 }
-.particle-container {
-    position: fixed; /* This is the key change */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensures particles are behind your content */
-    pointer-events: none; /* Prevents particles from blocking clicks */
-}
-
 .particle {
     position: fixed;
     width: 100%;
@@ -88,10 +78,18 @@ body {
         opacity: 0.4;
     }
 }
+h1 {
+    font-size: 1.5em;
+    color: blue;
+     animation: glowingAnimation 4s ease-in-out infinite;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px
+}
 .word {
     color: blue;
      animation: glowingAnimation 4s ease-in-out infinite;
-    font-size: 20px;
+    font-size: 2em;
     margin: 20px;
     padding: 10px 20px;
     border: 2px solid #00ffcc;
@@ -99,7 +97,6 @@ body {
     background-color: rgba(255, 255, 255, 0.1); /* Light background for word display */
     transition: transform 0.5s, opacity 0.5s;
 }
-
 .button {
     padding: 10px 20px;
     font-size: 1.2em;
