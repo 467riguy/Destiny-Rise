@@ -467,27 +467,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
             });
         }
-
-  // --- Live Clock ---
-            function updateClock() {
-                const now = new Date();
-                let hours = now.getHours();
-                let minutes = now.getMinutes();
-                let seconds = now.getSeconds();
-                const ampm = hours >= 12 ? 'PM' : 'AM';
-                hours = hours % 12;
-                hours = hours ? hours : 12;
-                minutes = minutes < 10 ? '0' + minutes : minutes;
-                seconds = seconds < 10 ? '0' + seconds : seconds;
-                const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-                const clockElem = document.getElementById('live-clock');
-                if (clockElem) {
-                    clockElem.textContent = timeString;
-                }
-            }
-            setInterval(updateClock, 1000);
-            updateClock();
-
             // --- Intro Animation ---
             const preloader = document.getElementById('preloader');
             const animatedElements = document.querySelectorAll('.animated-content');
@@ -513,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         link.classList.remove('active');
                     }
                 });
-            }, 1000);
+            }, 1255);
     });
 
 
@@ -589,9 +568,9 @@ const dot3 = document.createElement("div");
 dot3.className = "dot";
 
 // Append the dots to the loader container
-loader.appendChild(dot1);
+/*loader.appendChild(dot1);
 loader.appendChild(dot2);
-loader.appendChild(dot3);
+loader.appendChild(dot3);*/
 
 // Append the loading text and loader to the preloader
 preloader.appendChild(loadingText);
@@ -599,7 +578,6 @@ preloader.appendChild(loader);
 
 // You can now append the preloader to the body
 document.body.appendChild(preloader);
-
 // Append to body
 document.body.appendChild(preloader);
 function aboutblank() {
@@ -612,29 +590,6 @@ function aboutblank() {
 
             window.location.href = 'https://portal.friscoisd.org';
         }
-// Function to update the battery percentage
-async function updateBattery() {
-  const battery = await navigator.getBattery();
-  const batteryPercentageElement = document.getElementById("battery-percentage");
-  const batteryFillElement = document.getElementById("battery-fill");
-  const level = Math.floor(battery.level * 100);
-
-  batteryPercentageElement.textContent = `${level}%`;
-  batteryFillElement.style.width = `${level}%`;
-
-  // Update the color of the battery fill based on level
-  if (level < 20) {
-    batteryFillElement.style.backgroundColor = "red";
-  } else if (level < 50) {
-    batteryFillElement.style.backgroundColor = "orange";
-  } else {
-    batteryFillElement.style.backgroundColor = "white";
-  }
-}
-updateBattery();
-navigator.getBattery().then((battery) => {
-  battery.addEventListener("levelchange", updateBattery);
-});
 // Favicon
 function setFavicon(url) {
     const link = document.createElement('link');
@@ -650,9 +605,3 @@ function setTitle(title) {
 window.onload = function() {
     setTitle("Math Bros. | Dashboard");
 };
-/*
-window.onbeforeunload = function (event) {
-  const confirmationMessage = 'Leave Site?';
-  (event || window.event).returnValue = confirmationMessage;
-  return confirmationMessage;
-};*/
