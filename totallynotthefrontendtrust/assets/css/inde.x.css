@@ -78,7 +78,7 @@ body {
         opacity: 0.4;
     }
 }
-h1 {
+h2 {
     font-size: 1.5em;
     color: blue;
      animation: glowingAnimation 4s ease-in-out infinite;

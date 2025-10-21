@@ -571,7 +571,7 @@ const preloader = document.createElement("div");
 preloader.id = "preloader";
 
 // Create the loading text
-const loadingText = document.createElement("h1");
+const loadingText = document.createElement("h2");
 loadingText.textContent = "Let us set up everything for your experience...";
 
 // Create the loader container
