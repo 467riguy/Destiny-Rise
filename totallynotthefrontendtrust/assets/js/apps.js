@@ -216,10 +216,10 @@ function CreateCustomApp(customApp) {
         paragraph.appendChild(span);
     }
 
-    //urlElem.appendChild(face);
+    urlElem.appendChild(face);
     urlElem.appendChild(paragraph);
     columnDiv.appendChild(urlElem);
-   // columnDiv.appendChild(btn); // Commented out to hide the pin button
+    columnDiv.appendChild(btn); // Commented out to hide the pin button
 
     const nonPinnedApps = document.querySelector(".apps");
     nonPinnedApps.insertBefore(columnDiv, nonPinnedApps.firstChild);
@@ -297,8 +297,13 @@ fetch(path)
                     app.error = true;
                     app.say = "NowGG.nl is currently down.";
                 }
+                     }
+else if (app.url?.includes("neal.fun")) {
+                if (app.error === null || app.error === undefined) {
+                    app.error = true;
+                    app.say = "Neal.fun is currently down.";
+                }
             }
-
             const pinNum = appInd;
 
             const columnDiv = document.createElement("div");
@@ -384,7 +389,7 @@ fetch(path)
                         columnDiv.appendChild(url);
 
                         if (appInd !== 0) {
-                         //  columnDiv.appendChild(btn); // HIDE PIN BTN
+                        //   columnDiv.appendChild(btn); // HIDE PIN BTN
                         }
 
                         if (pinList != null && appInd !== 0) {

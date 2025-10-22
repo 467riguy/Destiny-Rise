@@ -1,161 +1,161 @@
   [
     {
       "name": "| Create App |",
-      "image": "/assets/media/icons/custom.webp",
+      "face": "/assets/media/faces/custom.webp",
       "categories": ["all"],
       "custom": "true"
     },
     {
       "name": "Google",
       "desc": "Google.com helps you find anything online.",
-      "icon": "/assets/img/goog.webp",
+      "face": "/assets/img/goog.webp",
       "url": "https://google.com",
       "categories": ["all"]
     },
     {
       "name": "Bing",
       "desc": "Search freely with Bing, by Microsoft.",
-      "icon": "/assets/img/bing.webp",
+      "face": "/assets/img/bing.webp",
       "url": "https://bing.com",
       "categories": ["all"]
     },
     {
       "name": "Pinterest",
       "desc": "Discover and save ideas with Pinterest.",
-      "icon": "/assets/img/pin.webp",
+      "face": "/assets/img/pin.webp",
       "url": "https://pinterest.com",
       "categories": ["all"]
     },
     {
       "name": "Twitch",
       "desc": "Watch and stream games live on Twitch.tv.",
-      "icon": "/assets/img/twitch.webp",
+      "face": "/assets/img/twitch.webp",
       "url": "https://twitch.tv",
       "categories": ["all"]
     },
     {
       "name": "GeForce NOW",
       "desc": "Play high-end PC games via GeForce NOW cloud.",
-      "icon": "/assets/img/geforcenow.webp",
+      "face": "/assets/img/geforcenow.webp",
       "url": "https://play.geforcenow.com",
       "categories": ["all"]
     },
     {
       "name": "Symbolab",
       "desc": "Step-by-step math solver powered by Symbolab.",
-      "icon": "/assets/img/symb.webp",
+      "face": "/assets/img/symb.webp",
       "url": "https://symbolab.com",
       "categories": ["all"]
     },
     {
       "name": "CoolMathGames",
       "desc": "Fun logic and math games at Coolmath Games!",
-      "icon": "/assets/img/cmg.webp",
+      "face": "/assets/img/cmg.webp",
       "url": "https://coolmathgames.com",
       "categories": ["all"]
     },
     {
       "name": "9anime",
       "desc": "Watch unlimited anime episodes in HD for free.",
-      "icon": "/assets/img/9ani.webp",
+      "face": "/assets/img/9ani.webp",
       "url": "https://9animetv.to",
       "categories": ["all"]
     },
     {
       "name": "CrazyGames",
       "desc": "Play free browser games instantly, no install.",
-      "icon": "https://play-lh.googleusercontent.com/91TVBW8CFsOsbh7r3Y-kACNVYely0I7C-UcYP3-Jw-_MHCtfa_18i_4L7ozvGMoI9bk",
+      "face": "https://play-lh.googleusercontent.com/91TVBW8CFsOsbh7r3Y-kACNVYely0I7C-UcYP3-Jw-_MHCtfa_18i_4L7ozvGMoI9bk",
       "url": "https://crazygames.com",
       "categories": ["all"]
     },
     {
       "name": "Neal.fun",
       "desc": "Games, visualizations, interactives and other weird stuff.",
-      "icon": "/assets/img/nf.webp",
+      "face": "/assets/img/nf.webp",
       "url": "https://neal.fun",
       "categories": ["all"]
     },
     {
       "name": "FMHY.net",
       "desc": "The largest collection of free stuff on the internet!",
-      "icon": "/assets/img/fmhy.webp",
+      "face": "/assets/img/fmhy.webp",
       "url": "https://fmhy.net",
       "categories": ["all"]
     },
     {
       "name": "Discord",
       "desc": "Chat, voice, and communities all in one place.",
-      "icon": "/assets/img/discord.webp",
+      "face": "/assets/img/discord.webp",
       "url": "https://discord.com/app",
       "categories": ["all"]
     },
     {
       "name": "YouTube",
       "desc": "Watch, create, and share videos worldwide.",
-      "icon": "/assets/img/youtube.webp",
+      "face": "/assets/img/youtube.webp",
       "url": "https://youtube.com",
       "categories": ["all"]
     },
     {
       "name": "Reddit",
       "desc": "Community discussion, news, memes, and more.",
-      "icon": "/assets/img/reddit.webp",
+      "face": "/assets/img/reddit.webp",
       "url": "https://reddit.com",
       "categories": ["all"]
     },
     {
       "name": "Wikipedia",
       "desc": "The free encyclopedia that anyone can edit.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=wikipedia.org",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=wikipedia.org",
       "url": "https://wikipedia.org",
       "categories": ["all"]
     },
     {
       "name": "GitHub",
       "desc": "Host, review, and collaborate on code.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=github.com",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=github.com",
       "url": "https://github.com",
       "categories": ["all"]
     },
     {
       "name": "Gmail",
       "desc": "Google's fast, secure email service.",
-      "icon": "https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
+      "face": "https://faces.face-faces.com/2642/PNG/512/google_mail_gmail_logo_face_159346.png",
       "url": "https://mail.google.com",
       "categories": ["all"]
     },
     {
       "name": "Outlook",
       "desc": "Email and calendar from Microsoft.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=outlook.live.com",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=outlook.live.com",
       "url": "https://outlook.live.com/mail/",
       "categories": ["all"]
     },
     {
       "name": "Netflix",
       "desc": "Watch TV shows, movies, and originals.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=netflix.com",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=netflix.com",
       "url": "https://netflix.com",
       "categories": ["all"]
     },
     {
       "name": "Amazon",
       "desc": "Shop millions of products online.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=amazon.com",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=amazon.com",
       "url": "https://amazon.com",
       "categories": ["all"]
     },
     {
       "name": "X (Twitter)",
       "desc": "Real-time news and social conversations.",
-      "icon": "/assets/img/twitter-x.webp",
+      "face": "/assets/img/twitter-x.webp",
       "url": "https://x.com/i/flow/login",
       "categories": ["all"]
     },
     {
       "name": "Instagram",
       "desc": "Share photos, reels, and stories.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=instagram.com",
+      "face": "https://www.google.com/s2/favfaces?sz=128&domain=instagram.com",
       "url": "https://instagram.com",
       "categories": ["all"]
     }
