@@ -89,7 +89,7 @@ const words = [
     "I hate iPad kids",
     "Athletics is fun!",
     "Copyright DR",
-    "Lil Baby",
+    "Melly Mike just like steph yeah yeah cuz he don't miss🔥",
     "I love rap + Basketball + Roblox + Coding!",
 ];
 
