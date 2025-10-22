@@ -108,11 +108,10 @@ function generateRandomWord() {
         // Start growing effect
         wordDisplay.style.transform = 'scale(1)';
         wordDisplay.style.opacity = '1';
-    }, 500); // Wait for half a second for the shrink animation to complete
+    }, 500);
 }
+setInterval(generateRandomWord, 2500);
 
-// Automatically change the word every 2 seconds
-setInterval(generateRandomWord, 2000); // Change word every 2 seconds
 document.addEventListener('DOMContentLoaded', function() {
     // --- Particle functions (integrated) ---
     const particles = [];
