@@ -185,7 +185,7 @@ h2 {
    margin-bottom: 12px;
 }
 .column {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     color: blue;
     animation: glowingAnimation 4s ease-in-out infinite;
       display: block;
@@ -200,6 +200,9 @@ h2 {
       border: 1px solid ghostwhite;
 }
 .column:hover {
+    color: black;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
  /* color: #000000;
   background-color: #ffffff;*/
   transform: translatey(-4px);
@@ -782,7 +785,6 @@ h2 {
     background-color: blue;
     animation: ga 4s ease-in-out infinite; /* Highlight active song */
     box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
-    border-color: var(--primary-light);
     transform: scale(1.02);
 }
 
@@ -1109,6 +1111,9 @@ background-color: rgba(0, 0, 0, 0.55);
   transition: all 0.3s ease;
 }
 .proxy-button:hover {
+    color: black;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
  /* color: #000000;
   background-color: #ffffff;*/
   transform: translatey(-4px);
