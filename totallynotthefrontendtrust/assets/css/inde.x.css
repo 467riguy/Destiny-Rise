@@ -200,7 +200,7 @@ h2 {
       border: 1px solid ghostwhite;
 }
 .column:hover {
-    color: black;
+    color: white;
     background-color: blue;
     animation: ga 4s ease-in-out infinite;
  /* color: #000000;
@@ -1111,7 +1111,7 @@ background-color: rgba(0, 0, 0, 0.55);
   transition: all 0.3s ease;
 }
 .proxy-button:hover {
-    color: black;
+    color: white;
     background-color: blue;
     animation: ga 4s ease-in-out infinite;
  /* color: #000000;
