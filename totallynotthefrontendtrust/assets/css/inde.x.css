@@ -1098,7 +1098,7 @@ background-color: rgba(0, 0, 0, 0.55);
 .proxy-button {
     color: blue;
     animation: glowingAnimation 4s ease-in-out infinite;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
   position: relative;
   padding: 1rem 2rem;
   border: 2px solid transparent;
