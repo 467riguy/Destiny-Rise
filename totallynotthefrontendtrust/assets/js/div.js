@@ -49,8 +49,7 @@ class TypeDown {
         } else {
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-
-        this.el.innerHTML = '<span class="typewriter">' + this.txt + "</span>";
+this.el.innerHTML = '<span class="typewriter">' + this.txt + "</span>";
 
         let delta = 150 - Math.random() * 250;
 
@@ -115,51 +114,10 @@ function generateRandomWord() {
 
 // Automatically change the word every 2 seconds
 setInterval(generateRandomWord, 2000); // Change word every 2 seconds
-
-
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Particle functions (integrated) ---
     const particles = [];
     const connections = [];
-    const statusElement = document.getElementById('status-display');
-
-    // Check for the status element immediately
-    if (!statusElement) {
-        console.error('Error: Could not find element with id "status-display".');
-        return;
-    }
-
-    let batteryInfo = 'Checking battery...';
-
-    // Function to format the current time
-    function updateClockTime() {
-        const now = new Date();
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let seconds = now.getSeconds();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12 || 12; // The hour '0' should be '12'
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        return `${hours}:${minutes}:${seconds} ${ampm}`;
-    }
-
-    // Function to handle and update the battery status
-    function updateBatteryStatus(battery) {
-        const batteryLevel = Math.round(battery.level * 100);
-        const charging = battery.charging ? '🔌⚡ Charging' : '🔋 Not Charging';
-        batteryInfo = `Battery: ${batteryLevel}% (${charging})`;
-
-        battery.addEventListener('levelchange', updateStatusDisplay);
-        battery.addEventListener('chargingchange', updateStatusDisplay);
-    }
-
-    // Single function to update the display text
-    function updateStatusDisplay() {
-        const timeString = updateClockTime();
-        statusElement.textContent = `${timeString} | ${batteryInfo}`;
-    }
-
-    // --- Particle functions (integrated) ---
     function createParticle() {
         const particle = document.createElement('div');
         particle.className = 'particle';
@@ -209,6 +167,48 @@ document.addEventListener('DOMContentLoaded', function() {
             connections.length = 0; // Clear connections
         }, 1000); // Lines last for 1 second
     }
+    // Set up intervals for all animations and status updates
+    setInterval(updateStatusDisplay, 1000);
+    setInterval(createParticle, 200);
+    setInterval(connectParticles, 800);
+    const statusElement = document.getElementById('status-display');
+
+    // Check for the status element immediately
+    if (!statusElement) {
+        console.error('Error: Could not find element with id "status-display".');
+        return;
+    }
+
+    let batteryInfo = 'Checking battery...';
+
+    // Function to format the current time
+    function updateClockTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12; // The hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        return `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+
+    // Function to handle and update the battery status
+    function updateBatteryStatus(battery) {
+        const batteryLevel = Math.round(battery.level * 100);
+        const charging = battery.charging ? '🔌⚡ Charging' : '🔋 Not Charging';
+        batteryInfo = `Battery: ${batteryLevel}% (${charging})`;
+
+        battery.addEventListener('levelchange', updateStatusDisplay);
+        battery.addEventListener('chargingchange', updateStatusDisplay);
+    }
+
+    // Single function to update the display text
+    function updateStatusDisplay() {
+        const timeString = updateClockTime();
+        statusElement.textContent = `${timeString} | ${batteryInfo}`;
+    }
     // --- Main Execution (scoped) ---
 
     // Handle battery info
@@ -226,11 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
         batteryInfo = 'Battery info unavailable';
         updateStatusDisplay();
     }
-
-    // Set up intervals for all animations and status updates
-    setInterval(updateStatusDisplay, 1000);
-    setInterval(createParticle, 200);
-    setInterval(connectParticles, 800);
 });
 
 
@@ -279,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function loadSong(index) {
                 if (filteredPlaylist.length === 0) {
                     audioPlayer.src = '';
-                    currentSongTitle.textContent = 'No songs in playlist';
+                currentSongTitle.textContent = 'No songs in playlist';
                     playPauseButton.disabled = true;
                     prevButton.disabled = true;
                     nextButton.disabled = true;
@@ -408,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 analysisText.textContent = '';
                 buttonElement.disabled = true;
 
-                const prompt = ` Provide a brief creative description and suggest a mood/vibe for the song titled "${songName}". Focus on feelings it evokes`;
+                const prompt = ` Provide a brief creative description and suggest a mood/vibe for the song titled ${songName}. Focus on feelings it evokes`;
                 const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
                 const payload = { contents: chatHistory };
                 const apiKey = ""; // Leave this as-is; Canvas will provide it at runtime.
