@@ -706,8 +706,9 @@ h2 {
 }
 
 .player-buttons button {
-    background-color: blue;
-    animation: ga 4s ease-in-out infinite;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: blue;
+    animation: glowingAnimation 4s ease-in-out infinite;
     border: none;
     padding: 12px 20px;
     border-radius: 50%; /* Circular buttons */
@@ -723,7 +724,9 @@ h2 {
 }
 
 .player-buttons button:hover {
-    background: var(--primary-light);
+    background-color: blue;
+    color: white;
+    animation: ga 4s ease-in-out infinite;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px var(--shadow-strong);
 }
@@ -1053,7 +1056,7 @@ background-color: rgba(0, 0, 0, 0.55);
 }
 /* --- Buttons --- */
 .key-button {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     color: blue;
     animation: glowingAnimation 4s ease-in-out infinite;
     border: none;
@@ -1066,6 +1069,9 @@ background-color: rgba(0, 0, 0, 0.55);
     margin-top: 10;
 }
 .key-button:hover {
+    background-color: blue;
+    color: white;
+    animation: ga 4s ease-in-out infinite;
     transform: translateY(-4px); /* Slight lift on hover */
     box-shadow: 0 4px 10px var(--shadow-strong);
 }

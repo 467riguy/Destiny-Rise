@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Set up intervals for all animations and status updates
     setInterval(updateStatusDisplay, 1000);
-    setInterval(createParticle, 200);
+    setInterval(createParticle, 200); // Create particles every 100ms
     setInterval(connectParticles, 800);
 });
 
