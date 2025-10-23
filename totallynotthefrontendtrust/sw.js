@@ -1,8 +1,8 @@
-importScripts("/assets/dyn/config.js?v=10-02-2024");
-importScripts("/assets/dyn/worker.js?v=10-02-2024");
-importScripts("/assets/ultra/bundle.js?v=10-02-2024");
-importScripts("/assets/ultra/config.js?v=10-02-2024");
-importScripts(__uv$config.sw || "/assets/ultra/sw.js?v=10-02-2024");
+importScripts("/assets/dyn/config.js");
+importScripts("/assets/dyn/worker.js");
+importScripts("/assets/ultra/bundle.js");
+importScripts("/assets/ultra/config.js");
+importScripts(__uv$config.sw || "/assets/ultra/sw.js");
 
 const uv = new UVServiceWorker();
 const dynamic = new Dynamic();
@@ -18,8 +18,8 @@ self.addEventListener("fetch", (event) => {
         return await dynamic.fetch(event);
       }
 
-      // Priority 2: UV service worker routing for '/a/' URLs
-      if (event.request.url.startsWith(`${location.origin}/a/`)) {
+      // Priority 2: UV service worker routing for '/win/' URLs
+      if (event.request.url.startsWith(`${location.origin}/win/`)) {
         return await uv.fetch(event);
       }
 

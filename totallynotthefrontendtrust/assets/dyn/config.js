@@ -1,5 +1,5 @@
 self.__dynamic$config = {
-	prefix: "/a/q/",
+	prefix: "/win/item/",
 	encoding: "xor",
 	mode: "production",
 	logLevel: 0,

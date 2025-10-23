@@ -2,7 +2,7 @@ setTimeout(() => {
   alert("Particles were removed here because they were causing lag.");
 }, 2650);
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=07-03-big25", { scope: "/a/" });
+  navigator.serviceWorker.register("../sw.js?v=07-03-big25", { scope: "/win/" });
   const form = document.getElementById("4m");
   const input = document.getElementById("searchPass");
   if (form && input) {
@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
     const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(
       iframe => iframe.classList.contains("active"),
     );
-    activeIframe.src = `/a/${__uv$config.encodeUrl(url)}`;
+    activeIframe.src = `/win/${__uv$config.encodeUrl(url)}`;
     activeIframe.dataset.tabUrl = url;
     input.value = url;
     console.log(activeIframe.dataset.tabUrl);
@@ -85,15 +85,15 @@ document.addEventListener("DOMContentLoaded", event => {
 newIframe.addEventListener("load", () => {
 });
 
-    const goUrl = sessionStorage.getItem("GoUrl");
+    const GoUrl = sessionStorage.getItem("GoUrl");
     const url = sessionStorage.getItem("URL");
 
    if (tabCounter === 0 || tabCounter === 1) {
-  if (goUrl !== null) {
-    if (goUrl.includes("/e/")) {
-      newIframe.src = window.location.origin + goUrl;
+  if (GoUrl !== null) {
+    if (GoUrl.includes("/e/")) {
+      newIframe.src = window.location.origin + GoUrl;
     } else {
-      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      newIframe.src = `${window.location.origin}/win/${GoUrl}`;
       
     }
   } else {
@@ -103,15 +103,15 @@ newIframe.addEventListener("load", () => {
   if (url !== null) {
     newIframe.src = window.location.origin + url;
     sessionStorage.removeItem("URL");
-  } else if (goUrl !== null) {
-    if (goUrl.includes("/e/")) {
-      newIframe.src = window.location.origin + goUrl;
+  } else if (GoUrl !== null) {
+    if (GoUrl.includes("/e/")) {
+      newIframe.src = window.location.origin + GoUrl;
     } else {
-      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      newIframe.src = `${window.location.origin}/win/${GoUrl}`;
       //newIframe.src = `/proxyhome`;
     }
   } else {
-     newIframe.src = `${window.location.origin}/a/${goUrl}`;
+     newIframe.src = `${window.location.origin}/win/${GoUrl}`;
   //  newIframe.src = "/proxyhome";
   }
 }
@@ -359,17 +359,17 @@ function Load() {
     activeIframe.contentWindow.document.readyState === "complete"
   ) {
     const website = activeIframe.contentWindow.document.location.href;
-    if (website.includes("/a/")) {
+    if (website.includes("/win/")) {
       const websitePath = website
         .replace(window.location.origin, "")
-        .replace("/a/", "");
+        .replace("/win/", "");
       localStorage.setItem("decoded", websitePath);
       const decodedValue = decodeXor(websitePath);
       document.getElementById("iv").value = decodedValue;
-    } else if (website.includes("/a/q/")) {
+    } else if (website.includes("/win/item")) {
       const websitePath = website
         .replace(window.location.origin, "")
-        .replace("/a/q/", "");
+        .replace("/win/item", "");
       const decodedValue = decodeXor(websitePath);
       localStorage.setItem("decoded", websitePath);
       document.getElementById("iv").value = decodedValue;
