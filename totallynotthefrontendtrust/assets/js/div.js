@@ -110,7 +110,7 @@ function generateRandomWord() {
         wordDisplay.style.opacity = '1';
     }, 500);
 }
-setInterval(generateRandomWord, 2500);
+setInterval(generateRandomWord, 2000);
 
 document.addEventListener('DOMContentLoaded', function() {
     const statusElement = document.getElementById('status-display');
@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const preloader = document.createElement("div");
 preloader.id = "preloader";
 const loadingText = document.createElement("h2");
-loadingText.textContent = "Let us set up everything for your experience...";
+loadingText.textContent = "We are currently setting everything up for you...";
 const spinner = document.createElement("div");
 spinner.className = "spinner";
 const loader = document.createElement("div");
