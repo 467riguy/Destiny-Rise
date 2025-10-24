@@ -217,12 +217,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove connection lines after a short duration
         setTimeout(() => {
             connections.forEach(line => line.remove());
-            connections.length = 0; // Clear connections
-        }, 1000); // Lines last for 1 second
+            connections.length = 0;
+        }, 1000);
     }
-    // Set up intervals for all animations and status updates
-    setInterval(updateStatusDisplay, 1000);
-    setInterval(createParticle, 200); // Create particles every 100ms
+   setInterval(updateStatusDisplay, 1000);
+    setInterval(createParticle, 200);
     setInterval(connectParticles, 800);
 });
 

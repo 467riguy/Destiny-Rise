@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -82,8 +82,7 @@ body {
         background-color: blue;
         box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
     }
-}
-@keyframes _cfg {
+}@keyframes _cfg {
     0% {
         color: blue;
         box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
@@ -140,6 +139,11 @@ h2 {
 .word {
     color: blue;
      animation: glowingAnimation 4s ease-in-out infinite;
+    /*  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;*/
     font-size: 2em;
     margin: 20px;
     padding: 10px 20px;
@@ -172,9 +176,23 @@ h2 {
     animation: blink 0.7s step-end infinite;
 }*/
 .random-word-generator {
-    color: blue;
+    margin: 20px;
+    padding: 10px 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s, opacity 0.5s;
+color: blue;
      animation: glowingAnimation 4s ease-in-out infinite;
+     /* background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);*/
+   /* background: linear-gradient(45deg, #f39c12, #8e44ad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;*/
+    text-decoration: underline;
 }
+
 /* end*/
 .column p {
    font-size: 12px;

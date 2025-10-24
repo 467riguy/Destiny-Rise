@@ -112,7 +112,7 @@
   }
 
 body[background="skibididdy"] {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url("/assets/media/background/thejinn.gif") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
@@ -286,7 +286,7 @@ body[theme="whatwuhs"] {
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
-    background-color: #000014;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;

@@ -88,6 +88,57 @@ body {
         text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
     }
 }
+@keyframes ga {
+    0% {
+        background-color: blue;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+
+    50% {
+        background-color: red;
+        box-shadow: none;
+    }
+
+    67% {
+        background-color: black;
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+    }
+
+    83% {
+        background-color: green;
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        background-color: blue;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+}
+@keyframes _cfg {
+    0% {
+        color: blue;
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
+    }
+    50% {
+        color: red;
+        box-shadow: 0 0 50px red;
+    }
+
+    67% {
+        color: black;
+        box-shadow: 0 0 50px rgba(255, 255, 0, 0.5);
+    }
+
+    83% {
+        color: green;
+        box-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        color: blue;
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
+    }
+}
 
 .particle {
     position: fixed;
