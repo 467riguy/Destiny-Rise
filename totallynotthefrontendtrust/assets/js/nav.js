@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   // Insert nav + button + backdrop
   const navHTML = `
     <div id="backdrop" class="backdrop"></div>
@@ -53,7 +53,68 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-      display: none; /* Initially hidden */
+      display: none;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+  `;
+  document.head.appendChild(style);
+});*/
+document.addEventListener("DOMContentLoaded", () => {
+  // Insert nav + button + backdrop
+  const navHTML = `
+    <div id="backdrop" class="backdrop" style="display: block;"></div>
+    <nav class="animated-content" id="main-nav">
+      <div class="nav-container">
+        <ul class="nav-links">
+      <!--    <div class="logo">SKR</div>-->
+          <li><a href="/home"><i class="fas fa-house cuhs"></i><span>Home</span></a></li>
+          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+          <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+          <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
+          <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <button id="nav-toggle"><i class="fas fa-times"></i></button>
+  `;
+
+  document.body.insertAdjacentHTML("afterbegin", navHTML);
+
+  const nav = document.getElementById("main-nav");
+  const btn = document.getElementById("nav-toggle");
+  const backdrop = document.getElementById("backdrop");
+
+  // Trigger intro animation (small delay looks smoother)
+  setTimeout(() => {
+    nav.classList.add("show");
+  }, 1255);
+
+  // Toggle nav on button click
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("closed");
+
+    // Change the button icon and backdrop based on the nav state
+    if (nav.classList.contains("closed")) {
+      backdrop.style.display = 'none'; // Hide backdrop
+      btn.innerHTML = '<i class="fas fa-bars"></i>'; // Change icon to bars
+    } else {
+      backdrop.style.display = 'block'; // Show backdrop
+      btn.innerHTML = '<i class="fas fa-times"></i>'; // Change icon to times
+    }
+  });
+
+  // Add styles for backdrop
+  const style = document.createElement('style');
+  style.textContent = `
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 999; /* Place it above other elements */
       transition: all 0.3s ease; /* Smooth transition */
     }
