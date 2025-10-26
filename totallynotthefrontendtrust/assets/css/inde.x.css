@@ -31,32 +31,58 @@ body {
     margin-top: 10px;
 }
 
+/*
+@keyframes glowingAnimation {
+  0% {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+  }
+
+  50% {
+    color: red;
+    text-shadow: none;
+  }
+
+  67% {
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+  }
+
+  83% {
+    color: green;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+
+  100% {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+  }
+}*/
 @keyframes glowingAnimation {
     0% {
-        color: blue;
-        text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        color: var(--primary-color);
     }
-
-    50% {
-        color: red;
-        text-shadow: none;
-    }
-
-    67% {
-        color: black;
-        text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
-    }
-
-    83% {
-        color: green;
-        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-    }
-
     100% {
-        color: blue;
-        text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        color: var(--primary-color);
     }
 }
+@keyframes ga {
+    0% {
+        background: var(--primary-light);
+    }
+    100% {
+        background: var(--primary-light);
+    }
+}
+@keyframes ga2 {
+    0% {
+background: var(--primary-color);
+    }
+    100% {
+background: var(--primary-color);
+    }
+}
+/*
 @keyframes ga {
     0% {
         background-color: blue;
@@ -82,7 +108,8 @@ body {
         background-color: blue;
         box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
     }
-}@keyframes _cfg {
+}    
+@keyframes _cfg {
     0% {
         color: blue;
         box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
@@ -106,7 +133,7 @@ body {
         color: blue;
         box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
     }
-}
+}*/
 .particle {
     position: fixed;
     width: 100%;
@@ -202,9 +229,9 @@ color: blue;
    margin-bottom: 12px;
 }
 .column {
-    background: rgba(255, 255, 255, 0.05);
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    color: white;
+    background: orange;
+    animation: ga2 4s ease-in-out infinite;
       display: block;
       cursor: pointer;
       position: relative;
@@ -222,6 +249,76 @@ color: blue;
     animation: ga 4s ease-in-out infinite;
  /* color: #000000;
   background-color: #ffffff;*/
+  transform: translatey(-4px);
+  transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+/* --- Buttons --- */
+.key-button {
+    color: white;
+       background: orange;
+    animation: ga2 4s ease-in-out infinite;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Pill shape for buttons */
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 10;
+}
+.key-button:hover {
+    background-color: blue;
+    color: white;
+    animation: ga 4s ease-in-out infinite;
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+.proxy-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+/*.proxy-button {
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.proxy-button:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}*/
+.proxy-button {
+    color: white;
+    background: orange;
+    animation: ga2 4s ease-in-out infinite;
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+/*  background-color: #000000;
+  color: #ffffff;*/
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.proxy-button:hover {
+    color: white;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
   transform: translatey(-4px);
   transition: all 0.3s ease;
     box-shadow: 0 4px 10px var(--shadow-strong);
@@ -445,8 +542,7 @@ color: blue;
 }
 
 .search-box .input::placeholder {
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    color: var(--primary-color);
 }
 
 .search-box .input:focus {
@@ -658,8 +754,7 @@ color: blue;
 }
 
 #music-search::placeholder {
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+   color: var(--primary-color);
 }
 
 #music-search:focus {
@@ -1043,8 +1138,7 @@ color: blue;
 }
 
 .key-form::placeholder {
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    color: var(--primary-color);
 }
 
 .key-form:focus {
@@ -1071,79 +1165,7 @@ input:hover {
 background-color: rgba(0, 0, 0, 0.55);
     transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
-/* --- Buttons --- */
-.key-button {
-    background: rgba(255, 255, 255, 0.05);
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px; /* Pill shape for buttons */
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 10;
-}
-.key-button:hover {
-    background-color: blue;
-    color: white;
-    animation: ga 4s ease-in-out infinite;
-    transform: translateY(-4px); /* Slight lift on hover */
-    box-shadow: 0 4px 10px var(--shadow-strong);
-}
-.proxy-buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
-  justify-content: center;
-  overflow-y: auto;
-  max-height: 300px;
-}
-/*.proxy-button {
-  position: relative;
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-    background-color: var(--primary-color);
-    color: var(--button-text-color);
-  cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.proxy-button:hover {
-  background-color: var(--primary-light);
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}*/
-.proxy-button {
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
-    background: rgba(255, 255, 255, 0.05);
-  position: relative;
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-/*  background-color: #000000;
-  color: #ffffff;*/
-  cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.proxy-button:hover {
-    color: white;
-    background-color: blue;
-    animation: ga 4s ease-in-out infinite;
- /* color: #000000;
-  background-color: #ffffff;*/
-  transform: translatey(-4px);
-  transition: all 0.3s ease;
-    box-shadow: 0 4px 10px var(--shadow-strong);
-}
-select#backgroundChange {
+.select {
   width: 100%;
   padding: 10px 15px;
   font-size: 0.9rem;
@@ -1158,90 +1180,12 @@ select#backgroundChange {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-select#backgroundChange:hover {
+.select:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-select#backgroundChange:focus {
-    background-color: black;
-  outline: none;
-  border-color: var(--accent, #7f5af0);
-  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
-}
-select#pChange {
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text, #fff);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-select#pChange:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-select#pChange:focus {
-    background-color: black;
-  outline: none;
-  border-color: var(--accent, #7f5af0);
-  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
-}
-select#themeChange {
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text, #fff);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-select#themeChange:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-select#themeChange:focus {
-    background-color: black;
-  outline: none;
-  border-color: var(--accent, #7f5af0);
-  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
-}
-select#engine {
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text, #fff);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-select#engine:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-select#engine:focus {
+.select:focus {
     background-color: black;
   outline: none;
   border-color: var(--accent, #7f5af0);

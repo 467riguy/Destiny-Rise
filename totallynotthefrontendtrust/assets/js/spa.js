@@ -21,22 +21,22 @@ function openPage(pageId) {
         console.log(`Redirecting to external page for: ${pageId}`);
         // Navigate to the real page based on pageId
         switch (pageId) {
-            case 'home-page':
+            case '#home-page':
                 window.location.href = '/kjn'; // Redirect to home
                 break;
             case '#games-page':
                 window.location.href = '/gamesads'; // Redirect to games
                 break;
-            case 'apps-page':
+            case '#apps-page':
                 window.location.href = '/apdsaps'; // Redirect to apps
                 break;
-            case 'animes-page':
+            case '#animes-page':
                 window.location.href = '/anidsames'; // Redirect to animes
                 break;
-            case 'settings-page':
+            case '#settings-page':
                 window.location.href = '/setasdtings'; // Redirect to settings
                 break;
-            case 'song-page':
+            case '#song-page':
                 window.location.href = '/sosdangs'; // Redirect to songs
                 break;
                 case 'search-page':

@@ -61,7 +61,23 @@ body {
     font-size: 20px;
     margin-top: 10px;
 }
-
+@keyframes ga {
+    0% {
+        background: var(--primary-light);
+    }
+    100% {
+        background: var(--primary-light);
+    }
+}
+@keyframes ga2 {
+    0% {
+background: var(--primary-color);
+    }
+    100% {
+background: var(--primary-color);
+    }
+}
+/*
 @keyframes glowingAnimation {
     0% {
         color: blue;
@@ -139,7 +155,7 @@ body {
         box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
     }
 }
-
+*/
 .particle {
     position: fixed;
     width: 100%;

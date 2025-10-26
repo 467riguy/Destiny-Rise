@@ -5,26 +5,59 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-const savedTheme = localStorage.getItem('background') || 'catppuccin-mochaa';
-document.body.setAttribute('background', savedTheme);
+(function() {
+  const BG_KEY = 'background';
+  const THEME_KEY = 'theme';
 
-// Define the setTheme function globally
-function setBackground(background) {
-    document.body.setAttribute('background', background);
-    localStorage.setItem('background', background);
-    
-   // alert("Background has been changed to: " + background);
-}
-const savedBackground = localStorage.getItem('theme') || 'whatss';
-document.body.setAttribute('theme', savedBackground);
+  const $ = (selector) => document.querySelector(selector);
 
-// Define the setTheme function globally
-function setTheme(theme) {
-    document.body.setAttribute('theme', theme);
-    localStorage.setItem('theme', theme);
-    // Show alert when theme is changed
-    alert("Theme has been changed to: " + theme);   
-}
+  // Restore saved background & theme on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedBg = localStorage.getItem(BG_KEY) || 'skibididdy';
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'whatluhs';
+
+    // Apply saved attributes
+    document.body.setAttribute('background', savedBg);
+    document.body.setAttribute('theme', savedTheme);
+
+    // Update dropdowns to show saved text
+    const bgSelect = $('.backgroundChange');
+    if (bgSelect) {
+      const option = Array.from(bgSelect.options).find(o => o.value === savedBg);
+      if (option) bgSelect.value = savedBg;
+    }
+
+    const themeSelect = $('.themeChange');
+    if (themeSelect) {
+      const option = Array.from(themeSelect.options).find(o => o.value === savedTheme);
+      if (option) themeSelect.value = savedTheme;
+    }
+  });
+
+  // Background setter
+  window.setBackground = function(value) {
+    if (!value) return;
+    localStorage.setItem(BG_KEY, value);
+    document.body.setAttribute('background', value);
+
+    const bgSelect = $('.backgroundChange');
+    if (bgSelect) bgSelect.value = value;
+  };
+
+  // Theme setter
+  window.setTheme = function(value) {
+    if (!value) return;
+    localStorage.setItem(THEME_KEY, value);
+    document.body.setAttribute('theme', value);
+
+    const themeSelect = $('.themeChange');
+    if (themeSelect) themeSelect.value = value;
+  };
+})();
+
+
+
+
 class TypeDown {
     constructor(el, toRotate, period) {
         this.toRotate = toRotate;
