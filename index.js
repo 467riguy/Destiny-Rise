@@ -10,7 +10,6 @@ import express from "express";
 import basicAuth from "express-basic-auth";
 import mime from "mime";
 import fetch from "node-fetch";
-// import { setupMasqr } from "./Masqr.js";
 import config from "./config.js";
 
 console.log(chalk.yellow("Starting npm node.js server using file </index.js\>"));
@@ -98,22 +97,15 @@ app.use((req, res, next) => {
   next();
 });
 
-/* if (process.env.MASQR === "true") {
-  console.log(chalk.green("Masqr is enabled"));
-  setupMasqr(app);
-} */
-
 app.use(express.static(path.join(__dirname, "totallynotthefrontendtrust")));
 app.use("/fq", cors({ origin: true }));
 
 const routes = [
-  { path: "/about", file: "/real_files/about.html" },
   { path: "/URLexeNcode_Iframe5.js", file: "/real_files/apps.html" },
   { path: "/URLexeNcode_Iframe3.js", file: "/real_files/games.html" },
   { path: "/URLexeNcode_Iframe6.js", file: "/real_files/settings.html"},
   { path: "/URLexeNcode_Iframe7.js", file: "/real_files/proxysearch.html" },
   { path: "/URLexeNcode_Iframe4.js", file: "/index.html" },
-  { path: "/contact", file: "/real_files/contactsupport.html" },
   { path: "/URLexeNcode_Iframe2.js", file: "/real_files/anime.html" },
   { path: "/URLexeNcode_Iframe1.js", file: "/real_files/song.html" },
   { path: "/proxyhome", file: "/real_files/proxyhome.html" },
