@@ -1,7 +1,7 @@
 const config = {
-  challenge: false,
+  challenge: true, // set to true to enable password protection
   users: {
-    daddy: "6969"
+    user_one: "bypass"
   }
 };
 

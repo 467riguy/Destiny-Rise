@@ -182,7 +182,7 @@ animation: gradientAnimation 5s ease infinite;
 /* --- Container intro (slides up from bottom) --- */
 .container.animated-content {
   opacity: 0;
-  transform: translateY(50px); /* start offset */
+  transform: translateY(50px) scale(2); /* start offset */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -194,7 +194,7 @@ animation: gradientAnimation 5s ease infinite;
 /* --- Nav intro (slides in from left) --- */
 nav.animated-content {
   opacity: 0;
-  transform: translateX(-50px); /* start offset */
+  transform: translateX(-50px) scale(2); /* start offset */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 

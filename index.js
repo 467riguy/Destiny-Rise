@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 5000;
 const cache = new Map();
 const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // Cache for 30 Days
 
-if (config.challenge !== false) {
+if (config.challenge === true) {
   console.log(
     chalk.green("🔒 Password protection is enabled! Listing logins below")
   );
@@ -110,7 +110,7 @@ const routes = [
   { path: "/about", file: "/real_files/about.html" },
   { path: "/URLexeNcode_Iframe5.js", file: "/real_files/apps.html" },
   { path: "/URLexeNcode_Iframe3.js", file: "/real_files/games.html" },
-  { path: "/URLexeNcode_Iframe6.js", file: "/real_files/settings.html" },
+  { path: "/URLexeNcode_Iframe6.js", file: "/real_files/settings.html"},
   { path: "/URLexeNcode_Iframe7.js", file: "/real_files/proxysearch.html" },
   { path: "/URLexeNcode_Iframe4.js", file: "/index.html" },
   { path: "/contact", file: "/real_files/contactsupport.html" },

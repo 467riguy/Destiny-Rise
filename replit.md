@@ -1,6 +1,6 @@
 # Destiny Rise 6.0
 
-**Last Updated:** October 2, 2025
+**Last Updated:** October 27, 2025
 
 ## Overview
 
