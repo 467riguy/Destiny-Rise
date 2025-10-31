@@ -1,10 +1,14 @@
 // hop off skids
+
+// Particles
 window.onload = function() {
     console.log("Window loaded, attempting to load particles.js");
     particlesJS.load('particles-js', '/assets/json/particles.json', function() {
         console.log('callback - particles.js config loaded');
     });
 };
+
+// Themes and backgrounds
 (function() {
   const BG_KEY = 'background';
   const THEME_KEY = 'theme';

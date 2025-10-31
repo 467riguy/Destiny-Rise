@@ -372,6 +372,69 @@ color: blue;
     position: relative;
     z-index: 1;
 }
+/* Style the pop-up container only when it's open */
+dialog#custom-alert[open] {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: var(--glass-mid);
+    margin: 0;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Rest of your CSS */
+#alert-message {
+    font-size: 1.5em;
+    color: blue;
+     animation: glowingAnimation 4s ease-in-out infinite;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px
+}
+dialog#custom-alert button {
+    color: white;
+    background: orange;
+    animation: ga2 4s ease-in-out infinite;
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+/*  background-color: #000000;
+  color: #ffffff;*/
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+dialog#custom-alert button:hover {
+    color: white;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
+  transform: translatey(-4px);
+  transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+dialog#custom-alert::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+html:has(dialog[open]) {
+    overflow: hidden;
+}
+
+
+
 
 .overlay {
     /* Optional: A subtle overlay if you want to darken the background image slightly */

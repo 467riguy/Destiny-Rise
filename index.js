@@ -12,7 +12,7 @@ import mime from "mime";
 import fetch from "node-fetch";
 import config from "./config.js";
 
-console.log(chalk.yellow("Starting npm node.js server using file </index.js\>"));
+console.log(chalk.yellow("Running server..."));
 
 const __dirname = process.cwd();
 const server = http.createServer();
