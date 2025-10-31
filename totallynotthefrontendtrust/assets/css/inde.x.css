@@ -770,7 +770,13 @@ html:has(dialog[open]) {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.music-description-important {
+    font-size: 1.1em;
+    color: red;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .highlight {
     color: var(--primary-light);
 }

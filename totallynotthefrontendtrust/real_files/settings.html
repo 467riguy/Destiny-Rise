@@ -37,14 +37,14 @@
           </div>-->
                     <div class="settings-card">
             <h3>Save Progress</h3>
-            <p>Download data when you get a good score on a game, when cache resets, restore progress. <br /> <span id="warn">WARNING: IMPORTING A SAVE FILE WILL OVERWRITE YOUR CURRENT SAVES!</span></p> 
+            <p>Download data when you get a good score on a game, when cache resets, restore progress. <br /> <span id="warn">IMPORTANT! Your current saves will be overwritten if imported another file</span></p> 
             <button class="key-button" value="Export" onclick="exportSaveData();">Download save</button>
             <button class="key-button" value="Import" onclick="importSaveData();">Import save</button>
           </div>
 
           <div class="settings-card">
             <h3>Search Engine</h3>
-            <p>Change the search engine. Relatively best only if one is down or one is not working.</p>
+            <p>Change the search engine. Relatively best only if one is down or one is not working.<br /> <span id="warn">IMPORTANT! Use this only if a search engine is down, preferably.</span></p>
             <select title="engine" id="engine" class="select" onchange="EngineChange(this)">
               <option value="DuckDuckGo">DuckDuckgo</option>
               <option value="Google">Google</option>
@@ -59,7 +59,7 @@
 
           <div class="settings-card">
             <h3>Choose your proxy</h3>
-            <p>Ultraviolet is the main option, because it is the best one, and dynamic was built for support and speed. Dynamic is a little bugged.</p>
+            <p>Ultraviolet is the main option, because it is the best one, and dynamic was built for support and speed. Dynamic is a little bugged. <br /> <span id="warn">IMPORTANT! Dynamic is for the speed and support. It is bugged sometimes, and ultraviolet is the best.</span></p>
               <select id="pChange" class="select">
                 <option value="uv">Ultraviolet</option>
                 <option value="dy">Dynamic</option>
@@ -69,6 +69,7 @@
           <div class="settings-card">
   <h3>Background, Particles</h3>
   <p>Pick from a variety of backgrounds to personalize your background of choice. </p>
+<div id="warn">IMPORTANT! Use this for changing your personalizaton</div>
             <select title="Background" id="backgroundChange" class="select" onchange="setBackground(this.value)">
               <option disabled selected>All backgrounds</option>
               <option disabled>Solid color themes</option>
@@ -83,11 +84,11 @@
                   <option value="catppuccin-macchiato">Beautiful Cyberpunk City Night GIF</option>
 
                <option disabled>Linear-gradient animations</option>
-              <option value="animated-gradient">Rainbow Animation LIVE</option>
-              <option value="cuhuacadfeelinsadaintnobodycareifugoodorbad">Gradient Animation LIVE</option>
+  <option value="animated-gradient">Rainbow Animation LIVE</option>
+   <option value="cuhuacadfeelinsadaintnobodycareifugoodorbad">Gradient Animation LIVE</option>
 
-                                <option disabled>Background Images</option>
-                                              <option value="cuhs2">A Satisfying Abstract BG</option>
+         <option disabled>Background Images</option>
+             <option value="cuhs2">A Satisfying Abstract BG</option>
               <option value="cuhs">Dark, cool-colored shaded BG</option>
               <option value="cuh">Abstract Cool</option>
               <option value="catppuccin-moccha">A Skull BG</option>
@@ -124,7 +125,7 @@
 
           <div class="settings-card">
             <h3>Set Background Image</h3>
-            <p>Change the site background. Use a valid HTTPS image link. Or it won’t work.</p>
+            <p>Change the site background. Use a valid HTTPS image link. Or it won’t work. <br /> <span id="warn">IMPORTANT! Use this if our site doesn't have enough themes for your experience personalization.</span></p>
             <input class="key-form" type="text" id="background-input" placeholder="Do https:// first" />
             <button class="key-button" id="save-button">Save</button>
             <button class="key-button" id="reset-button">Reset</button>
@@ -132,7 +133,7 @@
 
           <div class="settings-card">
             <h3>Set Panic Key</h3>
-            <p>Assign a key to instantly redirect to a random site.</p>
+            <p>Assign a key to instantly redirect to a safe site. <br /> <span id="warn">IMPORTANT! Use this if a teacher is watching your screen</span></p></p>
             <input type="text" id="eventKeyInput" placeholder="Panic Keys (Comma Not Working)" class="key-form" />
             <input class="key-form" placeholder="https://" type="text" id="linkInput" />
             <button class="key-button" onclick="saveEventKey()">Save</button>
