@@ -24,7 +24,7 @@ const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // Cache for 30 Days
 
 if (config.challenge === true) {
   console.log(
-    chalk.green("🔒 Password protection is enabled! Listing logins below")
+    chalk.green("Password protection is enabled. It's for teachers if they want to hop on.")
   );
   // biome-ignore lint/complexity/noForEach:
   Object.entries(config.users).forEach(([username, password]) => {
