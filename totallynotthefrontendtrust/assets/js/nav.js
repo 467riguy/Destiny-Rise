@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </nav>
-  <!--  <button id="nav-toggle"><i class="fas fa-times"></i></button>--> <!-- Changed icon to times instead of bars to make it open by default -->
+    <button id="nav-toggle"><i class="fas fa-times"></i></button> <!-- Changed icon to times instead of bars to make it open by default -->
   `;
 
   document.body.insertAdjacentHTML("afterbegin", navHTML);
