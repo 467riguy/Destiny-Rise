@@ -33,17 +33,13 @@
     min-height: 100%; 
     pointer-events: none;
 }
-/* --- Top Nav Specific Styles (Modified for Centering) --- */
 nav {
-  /* Positioning: Top bar */
   width: 100%;
   height: auto; 
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-
-  /* Appearance */
   background-color: var(--glass-mid);
   border-bottom: 1px solid var(--glass-border); 
   padding: 10px 20px; 
@@ -286,16 +282,6 @@ nav.animated-content.show {
   opacity: 1;
   transform: translateX(0);
 }
-#particles-js.animated-content {
-  opacity: 0;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-#particles-js.animated-content.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* --- Nav toggle (open/close) --- */
 nav.closed {
   transform: translateY(-100%) !important;

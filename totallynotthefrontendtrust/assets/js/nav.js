@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
       background-color: rgba(0, 0, 0, 0.5);*/
       z-index: 999;
       transition: all 0.3s ease;
+      pointer-events: none;
     }
+    
   `;
   document.head.appendChild(style);
 });
