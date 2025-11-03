@@ -298,7 +298,7 @@ nav.animated-content.show {
 
 /* --- Nav toggle (open/close) --- */
 nav.closed {
-  transform: translateX(-100%) !important;
+  transform: translateY(-100%) !important;
   opacity: 1; /* stays visible while sliding out */
 }
 .page {
