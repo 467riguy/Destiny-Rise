@@ -219,7 +219,7 @@ function popout() {
     const newWindow = window.open("about:blank", "_blank");
     if (newWindow) {
      // const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
-      const name = localStorage.getItem("name") || "Math Bros. Dashboard";
+      const name = localStorage.getItem("name") || "Algebra Academy Dashboard";
       const icon =
         localStorage.getItem("icon") ||
        // "/assets/media/favicon/khan.png";
@@ -251,7 +251,7 @@ function popout() {
     iframe.src = activeIframe.src;
 
     newWindow.document.body.appendChild(iframe);
-    const name = localStorage.getItem("name") || "Math Bros. Dashboard";
+const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
     const icon =
       localStorage.getItem("icon") ||
      // "/assets/media/favicon/khan.png";

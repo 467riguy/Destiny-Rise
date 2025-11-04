@@ -597,9 +597,8 @@ function _() { // Renamed the function for better practice
     var win = window.open('about:blank');
     var url = 'index.html';
 
-    if (win) { // Check if the popup was successful
-        // Set the title and icon for the new window immediately
-        const name = localStorage.getItem("name") || "Math Bros. Dashboard";
+    if (win) {  
+        const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
         const icon =
             localStorage.getItem("icon") ||
             "/assets/media/favicon/_trick.png";
@@ -642,5 +641,5 @@ function setTitle(title) {
     document.title = title;
 }
 window.onload = function() {
-    setTitle("Math Bros. | Dashboard");
+    setTitle("Algebra Academy | Dashboard");
 };

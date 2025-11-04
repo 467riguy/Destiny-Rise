@@ -351,7 +351,7 @@ function AB() {
       const style = iframe.style;
       const link = doc.createElement("link");
 
-      const name = localStorage.getItem("name") || "Math Bros. | Dashboard";
+      const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
       const icon = localStorage.getItem("icon") || "/assets/media/favicon/_trick.png";
 
       doc.title = name;

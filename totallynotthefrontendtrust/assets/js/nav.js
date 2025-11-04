@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <!--    <div class="logo">DR</div>-->
           <li><a href="/URLexeNcode_Iframe4.js"><i class="fas fa-house cuhs"></i><span>Home</span></a></li>
           <li><a href="/URLexeNcode_Iframe3.js"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
-          <li><a href="/URLexeNcode_Iframe5.js"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+          <li><a href="/URLexeNcode_Iframe5.js"><i class="fmas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
           <li><a href="/URLexeNcode_Iframe2.js"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
           <li><a href="/URLexeNcode_Iframe6.js"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
           <li><a href="/URLexeNcode_Iframe1.js"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
