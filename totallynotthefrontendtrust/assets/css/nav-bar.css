@@ -38,20 +38,14 @@ nav {
   height: auto; 
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 1000;
-  background-color: var(--glass-mid);
+  background-color: var(--glass-weak);
   border-bottom: 1px solid var(--glass-border); 
   padding: 10px 20px; 
   box-shadow: 0 4px 10px var(--shadow-strong); 
-
-  /* Flexbox for main layout */
   display: flex;
-  /* CHANGE: Use space-between again to separate logo and links */
   justify-content: space-between; 
   align-items: center;
-
-  transform: translateX(0);
   transition: transform 0.3s ease;
 }
 
@@ -104,8 +98,7 @@ nav {
   transition: transform 0.6s ease;
 }
 .nav-links li a:hover {
-    color: blue;
-     animation: glowingAnimation 4s ease-in-out infinite;
+    color: var(--primary-light);
 }
 
 .nav-links li a:hover i.cuhs {
@@ -113,8 +106,7 @@ nav {
 }
 
 .nav-links li a.active { 
-    color: blue;
-     animation: glowingAnimation 4s ease-in-out infinite;
+color: var(--primary-color);
 }
 /* SIDEBAR NAV */
 /*

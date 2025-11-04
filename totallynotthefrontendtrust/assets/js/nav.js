@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="animated-content" id="main-nav"> <!-- Removed animated-content closed class to make it open by default -->
       <div class="nav-container">
         <ul class="nav-links">
-      <!--    <div class="logo">SKR</div>-->
+      <!--    <div class="logo">DR</div>-->
           <li><a href="/URLexeNcode_Iframe4.js"><i class="fas fa-house cuhs"></i><span>Home</span></a></li>
           <li><a href="/URLexeNcode_Iframe3.js"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
           <li><a href="/URLexeNcode_Iframe5.js"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </nav>
-    <button id="nav-toggle"><i class="fas fa-times"></i></button> <!-- Changed icon to times instead of bars to make it open by default -->
+   <!-- <button id="nav-toggle"><i class="fas fa-times"></i></button> --><!-- Changed icon to times instead of bars to make it open by default -->
   `;
 
   document.body.insertAdjacentHTML("afterbegin", navHTML);
