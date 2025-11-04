@@ -1,3 +1,26 @@
+:root {
+    --primary-color: #7b68ee;
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61;
+    --tertiary-color: linear-gradient(45deg, #f39c12, #8e44ad);
+    --glass-weak: rgba(255, 255, 255, 0.05);
+    --glass-mid: rgba(255, 255, 255, 0.08);
+    --glass-background: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --accent-color: #b0e0e6;
+    --text-color: #cdd6f4;
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --button-text-color: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3);
+    --player-bg: rgba(0, 0, 0, 0.4);
+    --player-button-bg: var(--primary-color);
+    --player-button-hover-bg: var(--primary-light);
+    --player-text-color: var(--text-color);
+    --ai-analysis-bg: rgba(255, 255, 255, 0.05);
+    --ai-analysis-text: rgba(255, 255, 255, 0.8);
+}
 html, body {
   font-family: "Press Start 2P", cursive;
   font-size: 13px;
@@ -20,6 +43,35 @@ html, body {
 html ::-webkit-scrollbar, body ::-webkit-scrollbar {
   display: none; /* Hide scrollbar for WebKit browsers */
 }
+
+/* --- Input Fields (Key Forms) --- */
+.key-form,
+#background-input,
+#eventKeyInput,
+#linkInput {
+    padding: 12px 15px;
+    border: 1px solid var(--glass-border);
+    border-radius: 20px; /* Slightly rounded corners */
+    background-color: rgba(255, 255, 255, 0.25);
+    color: blue;
+    animation: glowingAnimation 4s ease-in-out infinite;
+    font-size: 1em;
+    outline: none;
+    box-shadow: inset 0 1px 3px var(--shadow-light);
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.key-form::placeholder {
+    color: var(--primary-color);
+}
+
+.key-form:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 1px 3px var(--shadow-light);
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15); /* Slight change on focus */
+}
 input {
   font-family: 'Poppins', sans-serif;
     padding: 12px 15px;
@@ -37,6 +89,173 @@ input {
 input:hover {
 background-color: rgba(0, 0, 0, 0.55);
     transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+/*
+@keyframes glowingAnimation {
+  0% {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+  }
+
+  50% {
+    color: red;
+    text-shadow: none;
+  }
+
+  67% {
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+  }
+
+  83% {
+    color: green;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+
+  100% {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+  }
+}*/
+@keyframes glowingAnimation {
+    0% {
+        color: var(--primary-color);
+    }
+    100% {
+        color: var(--primary-color);
+    }
+}
+@keyframes ga {
+    0% {
+        background: var(--primary-light);
+    }
+    100% {
+        background: var(--primary-light);
+    }
+}
+@keyframes ga2 {
+    0% {
+background: var(--primary-color);
+    }
+    100% {
+background: var(--primary-color);
+    }
+}
+/*
+@keyframes ga {
+    0% {
+        background-color: blue;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+
+    50% {
+        background-color: red;
+        box-shadow: none;
+    }
+
+    67% {
+        background-color: black;
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+    }
+
+    83% {
+        background-color: green;
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        background-color: blue;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+}    
+@keyframes _cfg {
+    0% {
+        color: blue;
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
+    }
+    50% {
+        color: red;
+        box-shadow: 0 0 50px red;
+    }
+
+    67% {
+        color: black;
+        box-shadow: 0 0 50px rgba(255, 255, 0, 0.5);
+    }
+
+    83% {
+        color: green;
+        box-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        color: blue;
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
+    }
+}*/
+.select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text, #fff);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.select:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.select:focus {
+    background-color: black;
+  outline: none;
+  border-color: var(--accent, #7f5af0);
+  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
+}
+.apps {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2.3em;
+   flex-direction: row;
+   margin-top: 30px;
+}
+
+.pinned {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2.3em;
+}
+select {
+   padding: 20px;
+   border-radius: 5px;
+   background: var(--background-column);
+   color: var(--text-primary);
+   font-size: 20px;
+   border: 0px;
+   outline: none;
+   cursor: pointer;
+}
+
+.input-c {
+    width: 100%;
+    max-width: 600px; /* Limit width of the search input */
+    margin-bottom: 20px; /* Space below search input */
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;     /* Center items horizontally */
+  gap: 20px;               /* Space between h1 and input */
 }
 .container {
   width: 862px;
@@ -66,49 +285,146 @@ background-color: rgba(0, 0, 0, 0.55);
   text-decoration: none;
   color: #ffffff;
 }
-.container .proxy-buttons-container {
+.column p {
+   font-size: 12px;
+   color: var(--text-primary);
+   text-align: center;
+   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+   margin-top: 10px;
+   margin-bottom: 12px;
+}
+.column {
+    color: white;
+    background: orange;
+    animation: ga2 4s ease-in-out infinite;
+      display: block;
+      cursor: pointer;
+      position: relative;
+      width: 145px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      background-clip: padding-box;
+      border: 1px solid ghostwhite;
+}
+.column:hover {
+    color: white;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
+ /* color: #000000;
+  background-color: #ffffff;*/
+  transform: translatey(-4px);
+  transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+/* --- Buttons --- */
+.key-button {
+    color: white;
+       background: orange;
+    animation: ga2 4s ease-in-out infinite;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Pill shape for buttons */
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 10;
+}
+.key-button:hover {
+    background-color: blue;
+    color: white;
+    animation: ga 4s ease-in-out infinite;
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
+.proxy-buttons-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px;
   justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
 }
-.container .proxy-buttons-container .proxy-button {
+/*.proxy-button {
+  position: relative;
+  padding: 1rem 2rem;
   border: 2px solid transparent;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
   cursor: pointer;
-  transition: 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-.container .proxy-buttons-container .proxy-button:hover {
-  transform: translateY(-20%) scale(1.1);
-}
-.container .proxy-buttons-container .proxy-button {
+.proxy-button:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}*/
+.proxy-button {
+    color: white;
+    background: orange;
+    animation: ga2 4s ease-in-out infinite;
+  position: relative;
   padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+/*  background-color: #000000;
+  color: #ffffff;*/
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-.container .proxy-buttons-container .proxy-button::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(90deg, #ff0000 0%, #ff7f00 16.66%, #ffff00 33.33%, #00ff00 50%, #0000ff 66.66%, #4b0082 83.33%, #8b00ff 100%);
-  background-size: 400% 400%;
-  z-index: -1;
-  animation: rainbow 5s linear infinite;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.proxy-button:hover {
+    color: white;
+    background-color: blue;
+    animation: ga 4s ease-in-out infinite;
+  transform: translatey(-4px);
+  transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-strong);
 }
-.container .proxy-buttons-container .proxy-button:hover::before {
-  opacity: 1;
+/*
+.column {
+    color: var(--button-text-color);
+    background: var(--primary-color);
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 145px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background-clip: padding-box;
+    border: 1px solid ghostwhite;
 }
-.container p:last-child a {
-  color: #ffffff;
+.column:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}*/
+/*.proxy-button {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 145px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid ghostwhite;
+  background-clip: padding-box;
 }
-
+.proxy-button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}*/
 #loader {
   position: fixed;
   top: 0;

@@ -30,110 +30,6 @@ body {
     font-size: 20px;
     margin-top: 10px;
 }
-
-/*
-@keyframes glowingAnimation {
-  0% {
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--primary-color);
-  }
-
-  50% {
-    color: red;
-    text-shadow: none;
-  }
-
-  67% {
-    color: black;
-    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
-  }
-
-  83% {
-    color: green;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-  }
-
-  100% {
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--primary-color);
-  }
-}*/
-@keyframes glowingAnimation {
-    0% {
-        color: var(--primary-color);
-    }
-    100% {
-        color: var(--primary-color);
-    }
-}
-@keyframes ga {
-    0% {
-        background: var(--primary-light);
-    }
-    100% {
-        background: var(--primary-light);
-    }
-}
-@keyframes ga2 {
-    0% {
-background: var(--primary-color);
-    }
-    100% {
-background: var(--primary-color);
-    }
-}
-/*
-@keyframes ga {
-    0% {
-        background-color: blue;
-        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
-    }
-
-    50% {
-        background-color: red;
-        box-shadow: none;
-    }
-
-    67% {
-        background-color: black;
-        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
-    }
-
-    83% {
-        background-color: green;
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-    }
-
-    100% {
-        background-color: blue;
-        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
-    }
-}    
-@keyframes _cfg {
-    0% {
-        color: blue;
-        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
-    }
-    50% {
-        color: red;
-        box-shadow: 0 0 50px red;
-    }
-
-    67% {
-        color: black;
-        box-shadow: 0 0 50px rgba(255, 255, 0, 0.5);
-    }
-
-    83% {
-        color: green;
-        box-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
-    }
-
-    100% {
-        color: blue;
-        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
-    }
-}*/
 .particle {
     position: fixed;
     width: 100%;
@@ -781,13 +677,6 @@ html:has(dialog[open]) {
     color: var(--primary-light);
 }
 
-/* --- Search Input (reused from other pages) --- */
-.input-c {
-    width: 100%;
-    max-width: 600px; /* Limit width of the search input */
-    margin-bottom: 20px; /* Space below search input */
-}
-
 #music-search { /* Specific ID for music search input */
     width: calc(100% - 30px); /* Account for padding */
     padding: 15px 20px;
@@ -1269,6 +1158,9 @@ select {
 }
 
 .input-c {
+    width: 100%;
+    max-width: 600px; /* Limit width of the search input */
+    margin-bottom: 20px; /* Space below search input */
   position: relative;
   margin-top: 150px;
   display: flex;
