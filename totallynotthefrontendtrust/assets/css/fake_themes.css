@@ -1,0 +1,63 @@
+body[theme="catppuccin-mochaa"] {
+  --text: #cdd6f4;
+--primary-color: black;
+--primary-light: #111111;
+}
+body[theme="whats"] {
+  --text: #cdd6f4;
+--primary-color: #000014;
+--primary-light: #001f3f;
+}
+/* #0a1d37 */
+body[theme="whatss"] {
+  --text: #cdd6f4;
+--primary-color: #555;
+--primary-light: #777;
+
+}
+body[theme="whathuzz"] {
+  --text: #cdd6f4;
+--primary-color: #32CD32;
+--primary-light: #A6FF00;
+
+}
+body[theme="whatwas"] {
+  --text: #cdd6f4;
+--primary-color: #f5a97f;       /* Warm peach */
+--primary-light: #f9c7ad;       /* Light warm peach */
+}
+body[theme="whatis"] {
+  --text: #cdd6f4;
+--primary-color: #FDCB6E;
+--primary-light: #FFEAA7;
+}
+body[theme="whatcuhs"] {
+  --text: #cdd6f4;
+--primary-color: #63b3ff;       /* Bright sky blue */
+--primary-light: #a3d1ff;       /* Lighter sky blue */
+}
+body[theme="whatbuzz"] {
+  --text: #cdd6f4;
+ --primary-color: #7cc1ff;      /* Soft sky blue */
+  --primary-light: #b9d9ff;
+}
+body[theme="whathuhs"] {
+  --text: #cdd6f4;
+--primary-color: #7cffdb;      /* Aquamarine */
+--primary-light: #b9fff0;      /* Light aquamarine */
+}
+body[theme="whatluhs"] {
+  --text: #cdd6f4;
+--primary-color: #ff5c79;      /* Soft pink-red */
+--primary-light: #ffa1a9;      /* Light pink */
+}
+body[theme="whatfuhs"] {
+  --text: #cdd6f4;
+--primary-color: #cdd104;  /* vivid pink */
+--primary-light: orange;  /* lighter pink */
+}
+body[theme="whatwuhs"] {
+  --text: #cdd6f4;
+--primary-color: #7b68ee;
+--primary-light: #9a88ff;
+}
