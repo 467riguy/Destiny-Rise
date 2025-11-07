@@ -215,7 +215,7 @@ function reload() {
 function popout() {
   const activeIframe = document.querySelector("#frame-container iframe.active");
   if (activeIframe) {
-    /*
+    
     const newWindow = window.open("about:blank", "_blank");
     if (newWindow) {
      // const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
@@ -240,7 +240,8 @@ function popout() {
       newIframe.src = activeIframe.src;
 
       newWindow.document.body.appendChild(newIframe);
-    }*/
+    }
+    /*
     var win = window.open('about:blank');
     var url = 'index.html';
     const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
@@ -268,9 +269,9 @@ function popout() {
     newWindow.document.body.appendChild(iframe);
   } else {
     console.error("No active iframe found");
-  }
+  }*/
 }
-
+}
 function eToggle() {
   const activeIframe = document.querySelector("#frame-container iframe.active");
   if (!activeIframe) {
