@@ -17,8 +17,8 @@ window.onload = function() {
 
   // Restore saved background & theme on page load
   window.addEventListener('DOMContentLoaded', () => {
- const savedBg = localStorage.getItem(BG_KEY) || 'catppuccin-macchiato';
-    const savedTheme = localStorage.getItem(THEME_KEY) || 'whatwuhs';
+ const savedBg = localStorage.getItem(BG_KEY) || 'catppuccin-mocha';
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'whatluhs';
 
     // Apply saved attributes
     document.body.setAttribute('background', savedBg);
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Feel It - d4vvd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
                 // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
                 { name: "Let You Down - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
-                { name: "Not like us - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
+                { name: "Not like us - Kendrick Lamar", url: "/assets/media/partial_song/e.m4a" }, // good
                 { name: "Fight back - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
                  { name: "Crown Neffex", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
                 { name: "Grateful - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         link.classList.remove('active');
                     }
                 });
-            }, 2267);
+            }, 1255);
     });
 
 
