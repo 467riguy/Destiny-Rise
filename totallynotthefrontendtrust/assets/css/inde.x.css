@@ -10,10 +10,9 @@ body {
 }
 /* start*/
 .glowing-text {
-    font-size: 45px;
     font-weight: bold;
     color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    animation: thirtytwoshots 2s ease-in-out infinite;
     position: relative;
     z-index: 10;
 }
@@ -333,7 +332,6 @@ html:has(dialog[open]) {
 
 
 .overlay {
-    /* Optional: A subtle overlay if you want to darken the background image slightly */
     position: absolute;
     top: 0;
     left: 0;
@@ -342,24 +340,35 @@ html:has(dialog[open]) {
     background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency */
     z-index: -1;
 }
-.container-max {
-    background-color: transparent; /* Semi-transparent dark background for content block */
+
+.container-game {
+    height: 70vh;
+    background-color: transparent;
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 10px 30px var(--shadow-strong);
-    width: 2200px;
+    width: 80vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between elements within the container */
+    gap: 25px;
     align-items: center;
     transition: all 0.3s ease;
+    overflow-y: auto; 
 }
-.container-max:hover {
+
+.container-game:hover {
     animation: _cfg 4s ease-in-out infinite;
     transition: all 0.3s ease;
 }
-.container-max h1 {
+#important {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: red;
+    text-shadow: 0 2px 5px var(--shadow-strong);
+}
+.container-game h1 {
     font-size: 3.5em;
     font-weight: bold;
     margin-bottom: 5px;
@@ -367,7 +376,7 @@ html:has(dialog[open]) {
     animation: glowingAnimation 4s ease-in-out infinite;
     text-shadow: 0 2px 5px var(--shadow-strong);
 }
-.container-max h2 {
+.container-game h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 0;

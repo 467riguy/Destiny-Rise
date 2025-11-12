@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     element.classList.add('show');
                 });
                 // --- Active Navigation Link ---
-                const navLinks = document.querySelectorAll('.nav-links li a');
+          const navLinks = document.querySelectorAll('.nav-links li a');
                 const currentPath = window.location.pathname;
                 navLinks.forEach(link => {
                     const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1
@@ -526,10 +526,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         link.classList.remove('active');
                     }
                 });
-            }, 1500);
+            }, 2267);
     });
-
-
 
 
        //  }, 500); // Delay for preloader to finish
@@ -567,6 +565,7 @@ const preloader = document.createElement("div");
 preloader.id = "preloader";
 const loadingText = document.createElement("h2");
 loadingText.textContent = "We are currently setting everything up for you...";
+loadingText.classList.add("glowing-text");
 const spinner = document.createElement("div");
 spinner.className = "spinner";
 const loader = document.createElement("div");
@@ -581,24 +580,19 @@ dot2.className = "dot";
 
 const dot3 = document.createElement("div");
 dot3.className = "dot";
-/*
-loader.appendChild(dot1);
-loader.appendChild(dot2);
-loader.appendChild(dot3);
-*/
+// loader.appendChild(dot1);
+// loader.appendChild(dot2);
+// loader.appendChild(dot3);
 preloader.appendChild(loadingText);
 preloader.appendChild(spinner);
 preloader.appendChild(loader);
 spinner.appendChild(emoji);
 document.body.appendChild(preloader);
-
-
 function _() {
     var win = window.open('about:blank');
     var url = 'index.html';
 
-    if (win) {  
-        const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
+    if (win) {     const name = localStorage.getItem("name") || "Algebra Academy | Dashboard";
         const icon =
             localStorage.getItem("icon") ||
             "/assets/media/favicon/_trick.png";
@@ -619,7 +613,6 @@ function _() {
         alert("Popup blocked! Please enable popups for this site to work.");
     }
 }
-
 function $() {
     window.location.href = "/URLexeNcode_Iframe4.js"
 }

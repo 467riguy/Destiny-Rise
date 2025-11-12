@@ -41,10 +41,9 @@ body {
 }
 /* start*/
 .glowing-text {
-    font-size: 45px;
     font-weight: bold;
     color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    animation: thirtytwoshots 2s ease-in-out infinite;
     position: relative;
     z-index: 10;
 }

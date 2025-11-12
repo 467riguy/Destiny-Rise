@@ -356,11 +356,10 @@ body[theme="whatwuhs"] {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-/*
-@keyframes glowingAnimation {
+@keyframes thirtytwoshots {
   0% {
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--primary-color);
+    color: blue;
+    text-shadow: 0 0 5px blue;
   }
 
   50% {
@@ -379,10 +378,10 @@ body[theme="whatwuhs"] {
   }
 
   100% {
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--primary-color);
+    color: blue;
+    text-shadow: 0 0 5px blue;
   }
-}*/
+}
 @keyframes glowingAnimation {
     0% {
         color: var(--primary-color);

@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("main-nav");
   const btn = document.getElementById("nav-toggle");
   const backdrop = document.getElementById("backdrop");
-  setTimeout(() => {
+ setTimeout(() => {
     nav.classList.add("show");
-  }, 1500);
+  }, 2267);
   btn.addEventListener("click", () => {
     nav.classList.toggle("closed");
     if (nav.classList.contains("closed")) {
