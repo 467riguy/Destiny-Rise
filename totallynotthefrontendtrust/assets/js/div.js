@@ -282,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Dum, Dumb, & Dumber - Lil baby", url: "/assets/media/partial_song/3.m4a" },
                 { name: "Money Trees - Kendrick Lamar", url: "/assets/media/partial_song/4.m4a" },
                 { name: "HUMBLE - Kendrick Lamar", url: "/assets/media/partial_song/5.m4a" }, // good
+                 { name: "Beatbox 4 - NLE Choppa (ft. SpottemGottem)", url: "/assets/media/partial_song/6741.m4a" },
                 { name: "Hope - XXXTentacion", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
                 { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
                 { name: "Prove it - 21 Savage", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
