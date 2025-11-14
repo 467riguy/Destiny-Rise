@@ -541,9 +541,7 @@ html:has(dialog[open]) {
 
 /* --- Open Blank Button --- */
 .open-blank-btn {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: blue;
-    animation: glowingAnimation 4s ease-in-out infinite;
+    background-color: var(--primary-color);
     border: none;
     padding: 15px 30px;
     border-radius: 30px; /* Pill shape for the button */
@@ -559,6 +557,7 @@ html:has(dialog[open]) {
 }
 
 .open-blank-btn:hover {
+    background-color: var(--primary-light);
     transform: translateY(-3px); /* Lift effect */
     box-shadow: 0 8px 20px var(--shadow-strong);
 }
