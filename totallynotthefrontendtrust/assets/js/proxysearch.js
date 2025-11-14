@@ -324,11 +324,11 @@ function FS() {
 }
 const fullscreenButton = document.getElementById("fullscreen-button");
 fullscreenButton.addEventListener("click", FS);
-/*if (navigator.userAgent.includes("Chrome")) {
+if (navigator.userAgent.includes("Chrome")) {
   window.addEventListener("resize", () => {
     navigator.keyboard.lock(["Escape"]);
   });
-}*/
+}
 // Home
 function home_page() {
   window.location.href = "/URLexeNcode_Iframe4.js";
