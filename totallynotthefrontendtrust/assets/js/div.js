@@ -289,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Ransom - Lil Tecca", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
                 { name: "Lifestylе - Rich Gang", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
                 { name: "Big Dawgs - Hanumankind", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
+                 { name: "Goosebumps - Travis Scott", url: "/assets/media/partial_song/rickowen.m4a" }, // good
                 { name: "VENGEANCE - Glorb", url: "/assets/media/partial_song/1.m4a" },
                 { name: "STD - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
                 { name: "The Bottom - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
