@@ -18,7 +18,7 @@ window.onload = function() {
   // Restore saved background & theme on page load
   window.addEventListener('DOMContentLoaded', () => {
  const savedBg = localStorage.getItem(BG_KEY) || 'catppuccin-mochaa';
-    const savedTheme = localStorage.getItem(THEME_KEY) || 'whatss';
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'whatluhs';
 
     // Apply saved attributes
     document.body.setAttribute('background', savedBg);

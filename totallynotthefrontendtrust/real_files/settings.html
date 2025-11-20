@@ -75,10 +75,6 @@
 <option value="animated-gradient">Rainbow Animation LIVE</option>        
 <option value="CUHt">Gradient Animation LIVE</option>              <option value="skibididdy">Beautiful GIF</option>
 <option value="catppuccin-macchiato">Cyberpunk City Night GIF</option>
-   <!--  <option disabled>All themes</option>
-     <option value="whatwuhs">Light Purple</option>
-     <option value="whatluhs">Red Radish</option>
-     <option value="whathuhs">Ocean Teal</option>-->
 <!--
          <option disabled>Background Images</option>
              <option value="cuhs2">A Satisfying Abstract BG</option>
@@ -98,6 +94,12 @@
               <option value="notnew">Lightly Colorful Brick Wall BG</option>
               <option value="cuhs3">Dark Shattered Neon BG</option>
               <option value="whatis">A BG of a beautiful dark blue</option>-->
+            </select>
+               <select title="Themes" id="themeChange" class="select" onchange="setTheme(this.value)">
+            <option disabled selected>All themes</option>
+             <option value="whatwuhs">Light Purple</option>
+             <option value="whatluhs">Red Radish</option>
+             <option value="whathuhs">Ocean Teal</option>
             </select>
  <button class="key-button" id="toggleParticles">Toggle Particles</button>
 </div>
