@@ -150,7 +150,7 @@ function generateRandomWord() {
 setInterval(generateRandomWord, 2000);
 
 document.addEventListener('DOMContentLoaded', function() {
-       const particles = [];
+      /* const particles = [];
         const connections = [];
         function createParticle() {
             const particle = document.createElement('div');
@@ -200,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 connections.forEach(line => line.remove());
                 connections.length = 0;
             }, 1000);
-        }
+        }*/
        setInterval(updateStatusDisplay, 1000);
-        setInterval(createParticle, 200);
-        setInterval(connectParticles, 800);
+      /*  setInterval(createParticle, 200);
+        setInterval(connectParticles, 800);*/
     const statusElement = document.getElementById('status-display');
 
     // Check for the status element immediately

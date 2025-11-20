@@ -63,7 +63,7 @@
       background: linear-gradient(45deg, green, black, red);
     }
   }
-body[background="cuhuacadfeelinsadaintnobodycareifugoodorbad"] {
+body[background="CUHt"] {
     background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff) no-repeat center center fixed;
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -241,7 +241,6 @@ body[theme="whathuzz"] {
     --text: #cdd6f4;
   --primary-color: #32CD32;
   --primary-light: #A6FF00;
-
 }
 body[theme="whatwas"] {
     --text: #cdd6f4;
