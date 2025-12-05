@@ -308,10 +308,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
                 { name: "Squabble up - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
                 { name: "Dia Delicia - NAKAMA", url: "/assets/media/partial_song/diadelicia.mp3" },
-                { name: "Accelerada", url: "/assets/media/partial_song/accelerated.mp3" },
-                { name: "Montagem Tomada", url: "/assets/media/partial_song/tomada.mp3" },
-                { name: "Montagem Ladrao", url: "/assets/media/partial_song/ladrao.mp3" },
-                { name: "Montagem Coma", url: "/assets/media/partial_song/coma.mp3" },
+                { name: "Accelerada - MXZI", url: "/assets/media/partial_song/accelerated.mp3" },
+                { name: "Montagem Tomada - MXZI", url: "/assets/media/partial_song/tomada.mp3" },
+                { name: "Montagem Ladrao - ATLXS", url: "/assets/media/partial_song/ladrao.mp3" },
+                { name: "Montagem Coma - Andromeda", url: "/assets/media/partial_song/coma.mp3" },
             ];
 
             let filteredPlaylist = [...allSongs];
