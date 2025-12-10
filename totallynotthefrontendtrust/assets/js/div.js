@@ -276,6 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
+                { name: "The Box - Roddy Ricch", url: "/assets/media/partial_song/box.mp3" },
                   { name: "Young, Black & Rich - Melly Mike", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ybr.mp3" },
                 { name: "From My Window - Juicе WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/frommywindowCUH.mp3" },
                 { name: "Overseas - Ken Carson", url: "/assets/media/partial_song/2.m4a" },
