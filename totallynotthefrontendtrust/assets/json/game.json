@@ -12,6 +12,12 @@
     "categories": ["all"]
   },
   {
+       "name": "PolyTrack",
+    "url": "https://www.kodub.com/apps/polytrack",
+    "face": "/assets/img/nothing yet",
+    "categories": ["all"]
+  },
+  {
     "name": "Gladihoppers",
     "url": "https://gladihoppers.io/",
     "face": "/assets/img/nothing yet",
