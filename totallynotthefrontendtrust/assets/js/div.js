@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         link.classList.remove('active');
                     }
                 });
-            }, 1255);
+            }, 2500);
     });
 
 
@@ -571,9 +571,9 @@ document.addEventListener('DOMContentLoaded', function() {
     */
 const preloader = document.createElement("div");
 preloader.id = "preloader";
-const loadingText = document.createElement("h2");
-loadingText.textContent = "We are currently setting everything up for you...";
-loadingText.classList.add("glowing-text");
+const loadingText = document.createElement("h6");
+loadingText.textContent = "Destiny Rise 6.0";
+// loadingText.classList.add("glowing-text"); we commented this because we don't want it to affect our loading screen color.
 const spinner = document.createElement("div");
 spinner.className = "spinner";
 const loader = document.createElement("div");
@@ -592,9 +592,9 @@ dot3.className = "dot";
 // loader.appendChild(dot2);
 // loader.appendChild(dot3);
 preloader.appendChild(loadingText);
-preloader.appendChild(spinner);
+//preloader.appendChild(spinner);
 preloader.appendChild(loader);
-spinner.appendChild(emoji);
+//spinner.appendChild(emoji);
 document.body.appendChild(preloader);
 function _() {
     var win = window.open('about:blank');

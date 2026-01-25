@@ -13,6 +13,3 @@ function hideCustomAlert() {
   dialog.close();
   messageEl.textContent = '';
 }
-setTimeout(() => {
-  showCustomAlert("We tricked the teachers into thinking this site was educational, but it's actually a proxy.");
-}, 1000);

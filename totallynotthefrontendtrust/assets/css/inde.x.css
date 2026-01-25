@@ -58,6 +58,39 @@ h2 {
     margin-top: 10px;
     margin-bottom: 12px
 }
+h6 {
+    font-size: 3.7em;
+    color: var(--uv);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+
+    /* Start small and invisible */
+    transform: scale(0);
+    opacity: 0;
+
+    /* Add animation */
+    animation: bounceScale 2s forwards; /* 2s matches preloader */
+}
+
+/* Bounce scale keyframes */
+@keyframes bounceScale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2); /* overshoot for pop effect */
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95); /* slight shrink */
+    }
+    100% {
+        transform: scale(1); /* settle at normal size */
+    }
+}
+
 .word {
     color: blue;
      animation: glowingAnimation 4s ease-in-out infinite;

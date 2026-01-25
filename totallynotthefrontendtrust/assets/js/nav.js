@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const backdrop = document.getElementById("backdrop");
  setTimeout(() => {
     nav.classList.add("show");
-  }, 1255);
+  }, 2500);
   btn.addEventListener("click", () => {
     nav.classList.toggle("closed");
     if (nav.classList.contains("closed")) {
