@@ -220,6 +220,17 @@ body[background="whatis"] {
     background-size: cover;
     --text: #cdd6f4;
 }
+body[background="defaultorg"] {
+  --text: #cdd6f4;
+      background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
+                url("/assets/media/background/noob.avif") no-repeat center center fixed;
+    background-size: cover;
+}
+body[theme="defaultorg"] {
+  --text: #cdd6f4;
+--primary-color: var(--uv);
+--primary-light: #8F00FF;
+}
 body[theme="catppuccin-mochaa"] {
     --text: #cdd6f4;
   --primary-color: black;
@@ -284,7 +295,7 @@ body[theme="whatwuhs"] {
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
     top: 0;
     left: 0;

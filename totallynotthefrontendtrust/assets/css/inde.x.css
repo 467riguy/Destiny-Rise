@@ -60,7 +60,7 @@ h2 {
 }
 h6 {
     font-size: 3.7em;
-    color: var(--uv);
+    color: var(--primary-color);
     text-align: center;
     margin-top: 10px;
     margin-bottom: 12px;
