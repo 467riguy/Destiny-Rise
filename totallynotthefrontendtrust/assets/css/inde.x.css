@@ -65,31 +65,32 @@ h6 {
     margin-top: 10px;
     margin-bottom: 12px;
 
-    /* Start small and invisible */
     transform: scale(0);
     opacity: 0;
 
-    /* Add animation */
-    animation: bounceScale 2s forwards; /* 2s matches preloader */
+    animation: steadyRise 3s linear forwards;
+    will-change: transform, opacity;
 }
 
-/* Bounce scale keyframes */
-@keyframes bounceScale {
+@keyframes steadyRise {
     0% {
         transform: scale(0);
         opacity: 0;
     }
-    60% {
-        transform: scale(1.2); /* overshoot for pop effect */
+
+    10% {
         opacity: 1;
     }
-    80% {
-        transform: scale(0.95); /* slight shrink */
-    }
+
     100% {
-        transform: scale(1); /* settle at normal size */
+        transform: scale(2.2);
+        opacity: 1;
     }
 }
+
+
+
+
 
 .word {
     color: blue;

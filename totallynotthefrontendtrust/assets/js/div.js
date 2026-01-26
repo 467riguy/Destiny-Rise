@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         link.classList.remove('active');
                     }
                 });
-            }, 2500);
+            }, 3000);
     });
 
 

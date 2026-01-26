@@ -295,7 +295,7 @@ body[theme="whatwuhs"] {
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
