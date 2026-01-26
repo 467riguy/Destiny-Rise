@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: hidden; /* Prevent vertical scroll */
 }
 /* start*/
 .glowing-text {
@@ -56,7 +57,15 @@ h2 {
      animation: glowingAnimation 4s ease-in-out infinite;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 12px
+    margin-bottom: 12px;
+}
+.h9 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-weight: bold;
 }
 h6 {
     font-size: 3.7em;
@@ -64,14 +73,16 @@ h6 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 12px;
-
     transform: scale(0);
     opacity: 0;
-
     animation: steadyRise 3s linear forwards;
     will-change: transform, opacity;
+    transition: all 0.3s ease;
 }
-
+h6:hover {
+    color: var(--primary-light);
+    transition: color 0.3s ease;
+}
 @keyframes steadyRise {
     0% {
         transform: scale(0);
@@ -132,14 +143,9 @@ h6 {
     animation: blink 0.7s step-end infinite;
 }*/
 .random-word-generator {
-    margin: 20px;
-    padding: 10px 20px;
-    border: 2px solid #00ffcc;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: transform 0.5s, opacity 0.5s;
-color: blue;
-     animation: glowingAnimation 4s ease-in-out infinite;
+color: var(--primary-light);
+transition: color 0.3s ease;
+font-weight: bold;
      /* background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);*/
    /* background: linear-gradient(45deg, #f39c12, #8e44ad);
       -webkit-background-clip: text;
@@ -147,7 +153,6 @@ color: blue;
       background-clip: text;
       color: transparent;*/
 }
-
 /* end*/
 .column p {
    font-size: 12px;
@@ -376,11 +381,11 @@ html:has(dialog[open]) {
 }
 
 .container-game {
-    height: 84vh;
-    background-color: transparent;
+    height: 92vh;
+    background-color: rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 10px 30px var(--shadow-strong), 0 10px 30px white;
+    /* box-shadow: 0 10px 30px var(--shadow-strong), 0 10px 30px white; */
     width: 100vw;
     box-sizing: border-box;
     display: flex;
@@ -391,7 +396,9 @@ html:has(dialog[open]) {
     overflow-y: auto;
     overflow-x: hidden;
 }
-
+.container-game::-webkit-scrollbar {
+    display: none;
+}
 .container-game:hover {
     animation: _cfg 4s ease-in-out infinite;
     transition: all 0.3s ease;
@@ -589,14 +596,14 @@ html:has(dialog[open]) {
     padding: 15px 30px;
     border-radius: 30px; /* Pill shape for the button */
     font-size: 1.1em;
-    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-flex; /* Align icon and text */
     align-items: center;
     gap: 10px;
     box-shadow: 0 5px 15px var(--shadow-strong);
+    font-weight: 600;
 }
 
 .open-blank-btn:hover {
@@ -1138,7 +1145,7 @@ input {
   border: none;
   outline: none;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
    border-radius: 30px;
    background: rgba(255, 255, 255, 0.05);

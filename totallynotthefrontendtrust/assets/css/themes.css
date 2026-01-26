@@ -228,8 +228,8 @@ body[background="defaultorg"] {
 }
 body[theme="defaultorg"] {
   --text: #cdd6f4;
---primary-color: var(--uv);
---primary-light: #8F00FF;
+--primary-color: #6F00FF;
+--primary-light: #8B66FF;
 }
 body[theme="catppuccin-mochaa"] {
     --text: #cdd6f4;

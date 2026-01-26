@@ -1,17 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const faLink = document.createElement("link");
+faLink.rel = "stylesheet";
+faLink.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+document.head.appendChild(faLink);
   const navHTML = `
     <div id="backdrop" class="backdrop" style="display: block;"></div> <!-- Added display: block; to make it open by default -->
     <nav class="animated-content" id="main-nav"> <!-- Removed animated-content closed class to make it open by default -->
       <div class="nav-container">
         <ul class="nav-links">
       <!--    <div class="logo">DR</div>-->
-          <li><a href="/URLexeNcode_Iframe4.js"><i class="fas fa-house cuhs"></i><span>Home</span></a></li>
-          <li><a href="/URLexeNcode_Iframe3.js"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
-          <li><a href="/URLexeNcode_Iframe5.js"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
-          <li><a href="/URLexeNcode_Iframe2.js"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
-          <li><a href="/URLexeNcode_Iframe6.js"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
-          <li><a href="/URLexeNcode_Iframe1.js"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+          <li><a href="/URLexeNcode_Iframe4.js"><i class="fas fa-house cuhs"></i><span></span></a></li>
+          <li><a href="/URLexeNcode_Iframe3.js"><i class="fas fa-gamepad cuhs"></i><span></span></a></li>
+          <li><a href="/URLexeNcode_Iframe5.js"><i class="fas fa-mobile-alt cuhs"></i><span></span></a></li>
+          <li><a href="/URLexeNcode_Iframe2.js"><i class="fas fa-tv cuhs"></i><span></span></a></li>
+          <li><a href="/URLexeNcode_Iframe1.js"><i class="fas fa-music cuhs"></i><span></span></a></li>
         </ul>
+        <div class="nav-divider"></div> <!-- Short dash separating top and bottom links -->
+        <!-- Bottom nav buttons -->
+        <ul class="nav-links nav-bottom">
+          <li><a href="https://discord.gg/mnWwZjcteb" target="_blank"><i class="fab fa-discord cuhs"></i><span></span></a></li>
+          <li><a href="https://github.com/razzlerazing2/skryptonite" target="_blank"><i class="fab fa-github cuhs"></i><span></span></a></li>
+          <li><a href="/URLexeNcode_Iframe6.js"><i class="fas fa-gear cuhs"></i><span></span></a></li>
+        </ul>
+
       </div>
     </nav>
    <!-- <button id="nav-toggle"><i class="fas fa-times"></i></button> --><!-- Changed icon to times instead of bars to make it open by default -->
@@ -22,9 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("main-nav");
   const btn = document.getElementById("nav-toggle");
   const backdrop = document.getElementById("backdrop");
- setTimeout(() => {
+
+  setTimeout(() => {
     nav.classList.add("show");
   }, 3000);
+
   btn.addEventListener("click", () => {
     nav.classList.toggle("closed");
     if (nav.classList.contains("closed")) {
@@ -51,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
       transition: all 0.3s ease;
       pointer-events: none;
     }
-    
   `;
   document.head.appendChild(style);
 });

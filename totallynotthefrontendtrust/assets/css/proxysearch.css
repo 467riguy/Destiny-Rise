@@ -259,14 +259,16 @@ h6 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 12px;
-
     transform: scale(0);
     opacity: 0;
-
     animation: steadyRise 3s linear forwards;
     will-change: transform, opacity;
+    transition: all 0.3s ease;
 }
-
+h6:hover {
+    color: var(--primary-light);
+    transition: color 0.3s ease;
+}
 @keyframes steadyRise {
     0% {
         transform: scale(0);
