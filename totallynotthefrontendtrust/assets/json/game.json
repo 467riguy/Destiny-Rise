@@ -11,6 +11,18 @@
     "face": "/assets/img/geforcenow.webp",
     "categories": ["all"]
   },
+    {
+    "name": "Gladihoppers",
+   "url": "  https://gladihoppers.io/",
+    "face": "/assets/img/geforcenow.webp",
+    "categories": ["all"]
+  },
+    {
+    "name": "Ragdoll Playground",
+   "url": "  https://ragdollplayground.io/",
+    "face": "/assets/img/geforcenow.webp",
+    "categories": ["all"]
+  },
   {
     "name": "X Trench Run",
    "url": "  https://cdn-factory.marketjs.com/en/x-trench-run/index.html",
